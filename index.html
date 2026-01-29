@@ -60,6 +60,30 @@
 
         @page { size: A4 portrait; margin: 0mm; }
 
+        /* Mobile-first responsiveness */
+        @media (max-width: 768px) {
+            body {
+                font-size: 16px;
+            }
+            
+            aside {
+                display: none !important;
+            }
+            
+            #main-content {
+                flex: 1;
+                width: 100%;
+                padding: 0 !important;
+                background-color: #f0f4f8;
+            }
+            
+            .view-section {
+                padding: 20px !important;
+                margin-top: 70px;
+                background-color: #f0f4f8;
+            }
+        }
+
         /* Tablet responsiveness */
         @media (max-width: 1024px) {
             .w-64 { width: 56px; }
@@ -72,16 +96,506 @@
             th, td { padding: 3px !important; }
         }
 
+        /* Mobile responsiveness (improved) */
+        @media (max-width: 768px) {
+            body {
+                font-size: 16px;
+            }
+            
+            #main-content {
+                width: 100%;
+                padding: 0 !important;
+                overflow-y: auto;
+            }
+            
+            .view-section {
+                padding: 16px !important;
+                margin-top: 0;
+            }
+            
+            h1 {
+                font-size: 1.75rem !important;
+                color: #fbbf24 !important;
+                font-weight: bold !important;
+                margin: 0 !important;
+            }
+            
+            h2 {
+                font-size: 1.5rem !important;
+                color: #1e293b !important;
+                font-weight: 700 !important;
+                margin: 12px 0 !important;
+            }
+            
+            h3 {
+                font-size: 1.25rem !important;
+                color: #1e293b !important;
+                font-weight: 700 !important;
+                margin: 12px 0 !important;
+            }
+            
+            p, span, label {
+                font-size: 15px !important;
+                color: #475569 !important;
+                font-weight: 500 !important;
+                line-height: 1.6 !important;
+            }
+            
+            label {
+                color: #1e293b !important;
+                display: block !important;
+                margin-bottom: 8px !important;
+                font-weight: 600 !important;
+            }
+            
+            .grid {
+                grid-template-columns: 1fr !important;
+                gap: 16px !important;
+            }
+            
+            table {
+                font-size: 14px;
+                border: 2px solid #cbd5e1;
+                margin: 16px 0 !important;
+                border-radius: 8px;
+                overflow: hidden;
+                width: 100%;
+                border-collapse: collapse;
+            }
+            
+            th {
+                background: linear-gradient(135deg, #1e293b, #334155) !important;
+                color: white !important;
+                font-weight: 800 !important;
+                padding: 16px 12px !important;
+                border: none !important;
+                text-align: right;
+                font-size: 14px !important;
+            }
+            
+            td {
+                padding: 14px 12px !important;
+                border-bottom: 1px solid #e2e8f0 !important;
+                color: #334155 !important;
+                font-size: 14px !important;
+            }
+            
+            tr:hover {
+                background-color: #e8f4f8 !important;
+            }
+            
+            tbody tr {
+                background-color: white;
+            }
+            
+            tbody tr:nth-child(even) {
+                background-color: #f9fafb;
+            }
+            
+            button {
+                padding: 14px 18px !important;
+                font-size: 15px !important;
+                font-weight: 700 !important;
+                border: none !important;
+                border-radius: 8px !important;
+                cursor: pointer !important;
+                transition: all 0.2s !important;
+                margin-bottom: 8px !important;
+            }
+            
+            button:active {
+                transform: scale(0.98);
+            }
+            
+            input, select, textarea {
+                padding: 12px 14px !important;
+                font-size: 16px !important;
+                border: 2px solid #cbd5e1 !important;
+                border-radius: 6px !important;
+                background-color: white !important;
+                color: #1e293b !important;
+                width: 100% !important;
+                margin-bottom: 12px !important;
+                box-sizing: border-box !important;
+            }
+            
+            input:focus, select:focus, textarea:focus {
+                border-color: #f59e0b !important;
+                outline: none !important;
+                box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.1) !important;
+            }
+            
+            .bg-white {
+                background-color: white !important;
+            }
+            
+            .rounded-xl {
+                border-radius: 12px !important;
+                margin-bottom: 16px !important;
+            }
+            
+            .p-6 {
+                padding: 20px !important;
+            }
+            
+            .p-4 {
+                padding: 16px !important;
+            }
+            
+            .p-8 {
+                padding: 24px !important;
+            }
+            
+            .p-3 {
+                padding: 12px !important;
+            }
+            
+            .gap-4 {
+                gap: 16px !important;
+            }
+            
+            .gap-6 {
+                gap: 20px !important;
+            }
+            
+            .gap-2 {
+                gap: 8px !important;
+            }
+            
+            .space-y-6 > * + * {
+                margin-top: 24px !important;
+            }
+            
+            .mb-6 {
+                margin-bottom: 24px !important;
+            }
+            
+            .mt-6 {
+                margin-top: 24px !important;
+            }
+            
+            .mt-8 {
+                margin-top: 32px !important;
+            }
+            
+            .overflow-x-auto {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                border-radius: 8px;
+            }
+            
+            /* Improved spacing */
+            body {
+                background-color: #f8fafc;
+            }
+            
+            .bg-white {
+                background-color: white !important;
+                border-radius: 12px !important;
+                margin-bottom: 16px !important;
+                border: 1px solid #e2e8f0 !important;
+            }
+            
+            .rounded-xl {
+                border-radius: 12px !important;
+                margin-bottom: 16px !important;
+            }
+            
+            label {
+                font-weight: 600 !important;
+                margin-bottom: 8px !important;
+            }
+            
+            input, select, textarea {
+                margin-bottom: 12px !important;
+                box-sizing: border-box !important;
+            }
+            
+            input[readonly], input[disabled] {
+                background-color: #f1f5f9 !important;
+                color: #64748b !important;
+            }
+            
+            button {
+                margin-bottom: 8px !important;
+            }
+            
+            table {
+                margin: 16px 0 !important;
+                border-radius: 8px;
+                overflow: hidden;
+            }
+            
+            /* Form groups */
+            form > div {
+                margin-bottom: 12px !important;
+            }
+            
+            form > div:last-child {
+                margin-bottom: 0 !important;
+            }
+            
+            .flex.justify-between.items-center {
+                flex-direction: column;
+                gap: 12px;
+                align-items: flex-start !important;
+            }
+            
+            p, span {
+                line-height: 1.6 !important;
+            }
+        }
+
         /* Custom scrollbar */
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: #f1f1f1; }
         ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+
+        /* Hide scrollbar on mobile main content */
+        @media (max-width: 768px) {
+            #main-content::-webkit-scrollbar {
+                display: none;
+            }
+            
+            #main-content {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+        }
+
+        /* Mobile sidebar toggle */
+        @media (max-width: 768px) {
+            aside.sidebar-open {
+                display: flex !important;
+                position: fixed;
+                left: 0;
+                top: 0;
+                height: 100vh;
+                width: 280px;
+                z-index: 40;
+                box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.6);
+                animation: slideIn 0.3s ease-out;
+                overflow-y: auto;
+                overflow-x: hidden;
+            }
+            
+            /* Hide hamburger button when sidebar is open */
+            #hamburger-btn.sidebar-open-btn {
+                display: none !important;
+            }
+            
+            /* Show all text in sidebar on mobile */
+            aside.sidebar-open .font-medium {
+                display: block !important;
+            }
+            
+            aside.sidebar-open p {
+                display: block !important;
+            }
+            
+            aside.sidebar-open nav {
+                flex: 1;
+            }
+            
+            /* Hide scrollbar for sidebar */
+            aside.sidebar-open::-webkit-scrollbar {
+                display: none;
+            }
+            
+            aside.sidebar-open {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+            
+            @keyframes slideIn {
+                from {
+                    transform: translateX(-100%);
+                }
+                to {
+                    transform: translateX(0);
+                }
+            }
+        }
+
+        #hamburger-btn {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            #hamburger-btn {
+                display: flex;
+            }
+            
+            /* Invoice History Table Mobile Styling */
+            #view-history {
+                padding: 12px !important;
+            }
+            
+            #view-history h2 {
+                font-size: 1.3rem;
+                margin-bottom: 16px;
+                color: #1e293b;
+                font-weight: 800;
+            }
+            
+            #view-history table {
+                font-size: 10px;
+                margin: 0;
+            }
+            
+            #view-history th {
+                padding: 8px 6px !important;
+                font-size: 9px;
+                text-align: center;
+                font-weight: 700;
+            }
+            
+            #view-history td {
+                padding: 8px 6px !important;
+                text-align: center;
+                font-size: 10px;
+            }
+            
+            #view-history button {
+                padding: 0 !important;
+                font-size: 10px !important;
+            }
+            
+            .hidden-mobile {
+                display: none !important;
+            }
+            
+            /* Compact invoice number */
+            .invoice-col-number {
+                max-width: 80px;
+                word-break: break-word;
+            }
+            
+            /* Password Modal Mobile Styling */
+            #password-prompt-modal {
+                padding: 12px !important;
+            }
+            
+            #password-prompt-modal .bg-white {
+                max-width: 90vw !important;
+                width: 90vw !important;
+                margin: 0 auto !important;
+            }
+            
+            #password-prompt-modal .bg-gradient-to-r {
+                padding: 16px 20px !important;
+            }
+            
+            #password-prompt-modal h2 {
+                font-size: 18px !important;
+            }
+            
+            #password-prompt-modal p {
+                font-size: 11px !important;
+            }
+            
+            #password-prompt-modal h3 {
+                font-size: 18px !important;
+            }
+            
+            #password-prompt-modal input[type="password"] {
+                font-size: 15px !important;
+                padding: 12px 14px !important;
+            }
+            
+            #password-prompt-modal .flex {
+                gap: 8px !important;
+            }
+            
+            #password-prompt-modal input[type="checkbox"] {
+                width: 18px !important;
+                height: 18px !important;
+                margin: 0 !important;
+            }
+            
+            #password-prompt-modal label {
+                font-size: 13px !important;
+            }
+            
+            #password-prompt-modal button {
+                padding: 14px 16px !important;
+                font-size: 15px !important;
+            }
+            
+            #password-prompt-modal .p-6 {
+                padding: 20px 16px !important;
+            }
+            
+            /* Modal Headers Mobile Styling */
+            #add-product-modal .bg-slate-900,
+            #add-incoming-modal .bg-slate-900 {
+                padding: 8px 12px !important;
+            }
+            
+            #add-product-modal h3,
+            #add-incoming-modal h3 {
+                font-size: 13px !important;
+            }
+            
+            #add-product-modal button i,
+            #add-incoming-modal button i {
+                font-size: 14px !important;
+            }
+            
+            /* Inventory Mobile Styling */
+            #view-inventory {
+                padding: 12px !important;
+            }
+            
+            #view-inventory h2 {
+                font-size: 1.3rem !important;
+                margin-bottom: 12px !important;
+            }
+            
+            #view-inventory button {
+                font-size: 13px !important;
+                padding: 10px 12px !important;
+            }
+            
+            #view-inventory input {
+                font-size: 13px !important;
+                padding: 10px 12px !important;
+            }
+            
+            #view-inventory .inventory-table {
+                font-size: 11px;
+            }
+            
+            #view-inventory th {
+                padding: 8px 6px !important;
+                font-size: 10px !important;
+            }
+            
+            #view-inventory td {
+                padding: 8px 6px !important;
+                font-size: 11px !important;
+            }
+            
+            #view-inventory button i {
+                font-size: 12px !important;
+            }
+        }
     </style>
+
 </head>
 <body class="bg-gray-50 text-gray-800 h-screen overflow-hidden flex">
 
+    <!-- Hamburger Button (Mobile) -->
+    <button id="hamburger-btn" onclick="toggleSidebar()" class="fixed top-4 left-4 bg-amber-600 hover:bg-amber-700 text-white p-4 rounded-lg z-50 flex items-center gap-2 transition shadow-lg">
+        <i class="ph ph-list text-2xl"></i>
+        <span class="font-bold text-base">القائمة</span>
+    </button>
+
+    <!-- Main Container -->
+    <div class="flex flex-1 w-full">
+
     <!-- Sidebar -->
-    <aside class="w-64 bg-slate-900 text-white flex-col hidden md:flex no-print shadow-xl z-20">
+    <aside id="sidebar" class="w-64 bg-slate-900 text-white flex-col hidden md:flex no-print shadow-xl z-20">
         <div class="p-6 border-b border-slate-700">
             <h1 class="text-2xl font-bold text-amber-500 flex items-center gap-2">
                 <img src="100.png" alt="لوغو" class="w-8 h-8 object-contain rounded"> النسر جروب
@@ -103,6 +617,9 @@
             </button>
             <button onclick="switchTab('incoming')" id="btn-incoming" class="nav-btn w-full flex items-center gap-3 px-4 py-3 rounded-lg transition-all text-slate-300 hover:bg-slate-800 hover:text-white">
                 <i class="ph ph-truck text-xl"></i> <span class="font-medium">الواردات</span>
+            </button>
+            <button onclick="switchTab('employees')" id="btn-employees" class="nav-btn w-full flex items-center gap-3 px-4 py-3 rounded-lg transition-all text-slate-300 hover:bg-slate-800 hover:text-white">
+                <i class="ph ph-user-circle text-xl"></i> <span class="font-medium">الموظفين</span>
             </button>
             <button onclick="switchTab('backup')" id="btn-backup" class="nav-btn w-full flex items-center gap-3 px-4 py-3 rounded-lg transition-all text-slate-300 hover:bg-slate-800 hover:text-white">
                 <i class="ph ph-shield-check text-xl"></i> <span class="font-medium">نسخ احتياطي</span>
@@ -129,7 +646,7 @@
     </aside>
 
     <!-- Main Content -->
-    <main id="main-content" class="flex-1 h-full overflow-y-auto relative">
+    <main id="main-content" class="flex-1 h-full overflow-y-auto relative w-full">
 
         <!-- Notification Toast -->
         <div id="notification-toast" class="fixed top-4 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50 opacity-0 pointer-events-none transition-all duration-300 flex items-center gap-2">
@@ -139,9 +656,9 @@
 
         <!-- Dashboard View -->
         <div id="view-dashboard" class="view-section p-8 space-y-6">
-            <div class="flex justify-between items-center mb-6">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-4">
                 <h2 class="text-3xl font-bold text-slate-800">نظرة عامة</h2>
-                <div class="text-sm text-gray-500 bg-white px-4 py-2 rounded-full border shadow-sm">
+                <div class="text-sm text-gray-500 bg-white px-4 py-2 rounded-full border shadow-sm w-full md:w-auto">
                     <span id="current-time-display"></span>
                 </div>
             </div>
@@ -203,28 +720,28 @@
 
         <!-- Inventory View -->
         <div id="view-inventory" class="view-section hidden p-8">
-            <div class="flex justify-between items-center mb-6">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-3">
                 <h2 class="text-2xl font-bold text-slate-800">إدارة المخزون</h2>
-                <button onclick="toggleModal('add-product-modal', true)" class="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-lg flex items-center gap-2 transition shadow-lg">
-                    <i class="ph ph-plus-circle text-lg"></i> إضافة صنف جديد
+                <button onclick="toggleModal('add-product-modal', true)" class="bg-amber-600 hover:bg-amber-700 text-white px-4 py-3 rounded-lg flex items-center gap-2 transition shadow-lg w-full md:w-auto justify-center md:justify-start font-bold">
+                    <i class="ph ph-plus-circle text-lg"></i> إضافة صنف
                 </button>
             </div>
 
             <div class="relative mb-6">
-                <input type="text" id="inventory-search" onkeyup="renderInventoryTable()" placeholder="بحث بكود المنتج أو النوع..." class="w-full p-3 pr-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 outline-none shadow-sm">
+                <input type="text" id="inventory-search" onkeyup="renderInventoryTable()" placeholder="بحث بالكود أو النوع..." class="w-full p-3 pr-10 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 outline-none shadow-sm">
                 <i class="ph ph-magnifying-glass absolute right-3 top-3.5 text-gray-400 text-xl"></i>
             </div>
 
-            <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
-                <table class="w-full text-right">
-                    <thead class="bg-slate-50 text-slate-700 font-semibold border-b">
+            <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-x-auto">
+                <table class="w-full text-right inventory-table">
+                    <thead class="bg-gradient-to-r from-slate-900 to-slate-700 text-white font-bold border-b">
                         <tr>
-                            <th class="p-4">الكود</th>
-                            <th class="p-4">النوع</th>
-                            <th class="p-4">الوزن (جم)</th>
-                            <th class="p-4">السعر</th>
-                            <th class="p-4">العدد</th>
-                            <th class="p-4">إجراءات</th>
+                            <th class="p-3 text-sm">الكود</th>
+                            <th class="p-3 text-sm">النوع</th>
+                            <th class="p-3 text-sm hidden-mobile">الوزن</th>
+                            <th class="p-3 text-sm">السعر</th>
+                            <th class="p-3 text-sm">العدد</th>
+                            <th class="p-3 text-sm">إجراءات</th>
                         </tr>
                     </thead>
                     <tbody id="inventory-table-body" class="divide-y divide-gray-100"></tbody>
@@ -301,6 +818,16 @@
                                 <span>الإجمالي:</span>
                                 <span id="summary-total" class="text-emerald-600">0 ج.م</span>
                             </div>
+                            <div class="border-t pt-3">
+                                <label class="block text-sm font-medium text-gray-700 mb-2">المبلغ المدفوع</label>
+                                <input type="number" id="inv-paid-amount" value="0" min="0" oninput="updateRemainingBalance()" class="w-full p-3 border-2 border-amber-300 rounded-lg focus:border-amber-600 focus:outline-none text-lg font-bold">
+                                <div class="mt-3 p-3 bg-blue-50 rounded-lg border border-blue-200">
+                                    <div class="flex justify-between items-center text-lg">
+                                        <span class="font-bold text-slate-800">الرصيد المتبقي:</span>
+                                        <span id="remaining-balance" class="font-bold text-blue-600 text-xl">0 ج.م</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <button onclick="saveInvoice()" id="btn-save-invoice" disabled class="w-full bg-amber-600 hover:bg-amber-700 text-white py-3 rounded-lg font-bold shadow-lg transition disabled:bg-gray-300 disabled:cursor-not-allowed flex justify-center items-center gap-2">
                             <i class="ph ph-check-circle text-xl"></i> حفظ وإنشاء
@@ -316,28 +843,30 @@
         <!-- History View -->
         <div id="view-history" class="view-section hidden p-8">
             <h2 class="text-2xl font-bold text-slate-800 mb-6">سجل الفواتير السابقة</h2>
-            <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
-                <table class="w-full text-right">
-                    <thead class="bg-slate-50 text-slate-700 border-b">
+            <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-x-auto">
+                <table class="w-full text-right table-invoice-history">
+                    <thead class="bg-gradient-to-r from-slate-900 to-slate-700 text-white border-b">
                         <tr>
-                            <th class="p-4">رقم الفاتورة</th>
-                            <th class="p-4">التاريخ</th>
-                            <th class="p-4">العميل</th>
-                            <th class="p-4">عدد الأصناف</th>
-                            <th class="p-4">الإجمالي</th>
-                            <th class="p-4">إجراءات</th>
+                            <th class="p-4 font-bold text-sm invoice-col-number">رقم الفاتورة</th>
+                            <th class="p-4 font-bold text-sm invoice-col-date">التاريخ</th>
+                            <th class="p-4 font-bold text-sm invoice-col-customer">العميل</th>
+                            <th class="p-4 font-bold text-sm invoice-col-items hidden-mobile">عدد الأصناف</th>
+                            <th class="p-4 font-bold text-sm invoice-col-total">الإجمالي</th>
+                            <th class="p-4 font-bold text-sm invoice-col-paid hidden-mobile">المدفوع</th>
+                            <th class="p-4 font-bold text-sm invoice-col-balance">الرصيد</th>
+                            <th class="p-4 font-bold text-sm invoice-col-actions">إجراءات</th>
                         </tr>
                     </thead>
-                    <tbody id="history-table-body" class="divide-y divide-gray-100"></tbody>
+                    <tbody id="history-table-body" class="divide-y divide-gray-200"></tbody>
                 </table>
             </div>
         </div>
 
         <!-- Incoming View -->
         <div id="view-incoming" class="view-section hidden p-8">
-            <div class="flex justify-between items-center mb-6">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-4">
                 <h2 class="text-2xl font-bold text-slate-800">إدارة الوارد (المشتريات)</h2>
-                <button onclick="resetIncomingForm(); toggleModal('add-incoming-modal', true)" class="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-lg flex items-center gap-2 transition shadow-lg">
+                <button onclick="resetIncomingForm(); toggleModal('add-incoming-modal', true)" class="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-lg flex items-center gap-2 transition shadow-lg w-full md:w-auto justify-center md:justify-start">
                     <i class="ph ph-plus-circle text-lg"></i> إضافة وارد جديد
                 </button>
             </div>
@@ -402,51 +931,179 @@
                 </div>
             </div>
         </div>
+        <!-- Employees View -->
+        <div id="view-employees" class="view-section hidden p-8">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-4">
+                <h2 class="text-2xl font-bold text-slate-800">الموظفين وحساب الأجر اليومي</h2>
+                <div class="text-sm text-gray-500 bg-white px-4 py-2 rounded-full border shadow-sm w-full md:w-auto text-center md:text-right">
+                    يمكن الوصول للموقع من الهاتف وحفظ البيانات محلياً
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                <form id="employee-form" onsubmit="handleEmployeeForm(event)" class="grid grid-cols-1 md:grid-cols-3 gap-4 items-end">
+                    <input type="hidden" id="emp-id">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">اسم الموظف</label>
+                        <input type="text" id="emp-name" class="w-full p-2 border rounded focus:ring-amber-500" placeholder="مثال: أحمد محمد" required>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">رقم التليفون</label>
+                        <input type="tel" id="emp-phone" class="w-full p-2 border rounded focus:ring-amber-500" placeholder="01XXXXXXXXX" required>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">راتب الشهر (ج.م)</label>
+                        <input type="number" id="emp-monthly" class="w-full p-2 border rounded focus:ring-amber-500" placeholder="مثال: 5000" required>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">الشهر للحساب</label>
+                        <input type="month" id="emp-month" class="w-full p-2 border rounded focus:ring-amber-500">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">الأيام المحسوبة</label>
+                        <input type="text" id="emp-working-days" class="w-full p-2 border rounded bg-gray-100" readonly>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">الأجر اليومي</label>
+                        <input type="text" id="emp-daily-rate" class="w-full p-2 border rounded bg-gray-100" readonly>
+                    </div>
+
+                    <div class="md:col-span-3 flex flex-col md:flex-row gap-2">
+                        <button type="button" onclick="calculateDailyForForm()" class="bg-slate-800 text-white px-4 py-2 rounded-lg flex-1">حساب الأجر اليومي</button>
+                        <button type="submit" class="bg-amber-600 text-white px-4 py-2 rounded-lg flex-1">حفظ الموظف</button>
+                        <button type="button" onclick="resetEmployeeForm()" class="bg-gray-200 px-4 py-2 rounded-lg flex-1">إعادة</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden mt-6">
+                <table class="w-full text-right">
+                    <thead class="bg-slate-50 text-slate-700 border-b">
+                        <tr>
+                            <th class="p-4">الاسم</th>
+                            <th class="p-4">الهاتف</th>
+                            <th class="p-4">راتب الشهر</th>
+                            <th class="p-4">أجر اليوم (لشهر محدد)</th>
+                            <th class="p-4">إجراءات</th>
+                        </tr>
+                    </thead>
+                    <tbody id="employees-table-body" class="divide-y divide-gray-100"></tbody>
+                </table>
+            </div>
+
+            <!-- Attendance Section -->
+            <div class="mt-8 bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                <h3 class="text-xl font-bold text-slate-800 mb-4 flex items-center gap-2">
+                    <i class="ph ph-clipboard-list"></i> تسجيل الحضور
+                </h3>
+                <form id="attendance-form" onsubmit="handleAttendanceForm(event)" class="grid grid-cols-1 md:grid-cols-4 gap-4 items-end">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">اختر الموظف</label>
+                        <select id="att-employee" class="w-full p-2 border rounded focus:ring-amber-500" required>
+                            <option value="">-- اختر موظف --</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">التاريخ</label>
+                        <input type="text" id="att-date" class="w-full p-2 border rounded focus:ring-amber-500" placeholder="مثال: 29/01/2026" required oninput="formatArabicDateInput(this)">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">الحالة</label>
+                        <select id="att-status" class="w-full p-2 border rounded focus:ring-amber-500" required>
+                            <option value="present">حاضر ✓</option>
+                            <option value="absent">غياب ✗</option>
+                            <option value="half">نصف يوم 50%</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-lg font-bold w-full">حفظ الحضور</button>
+                </form>
+            </div>
+
+            <!-- Attendance Records Table -->
+            <div class="mt-6 bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                <h3 class="text-lg font-bold p-4 bg-slate-50 border-b">سجل الحضور</h3>
+                <table class="w-full text-right">
+                    <thead class="bg-slate-50 text-slate-700 border-b">
+                        <tr>
+                            <th class="p-4">التاريخ</th>
+                            <th class="p-4">اسم الموظف</th>
+                            <th class="p-4">الحالة</th>
+                            <th class="p-4">إجراءات</th>
+                        </tr>
+                    </thead>
+                    <tbody id="attendance-table-body" class="divide-y divide-gray-100"></tbody>
+                </table>
+            </div>
+
+            <!-- Salary Summary by Attendance -->
+            <div class="mt-6 bg-gradient-to-r from-amber-50 to-yellow-50 p-6 rounded-xl shadow-sm border border-amber-200">
+                <h3 class="text-lg font-bold text-slate-800 mb-4 flex items-center gap-2">
+                    <i class="ph ph-calculator"></i> ملخص الراتب حسب الحضور
+                </h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-right text-sm">
+                        <thead class="bg-white border-b">
+                            <tr>
+                                <th class="p-3 font-bold">اسم الموظف</th>
+                                <th class="p-3 font-bold">راتب الشهر</th>
+                                <th class="p-3 font-bold">أيام العمل الكلية</th>
+                                <th class="p-3 font-bold">أيام الحضور</th>
+                                <th class="p-3 font-bold">أجر اليوم</th>
+                                <th class="p-3 font-bold text-emerald-600">الراتب المستحق</th>
+                            </tr>
+                        </thead>
+                        <tbody id="salary-summary-body" class="divide-y divide-amber-100"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
     </main>
 
     <!-- Modal: Add Product -->
-    <div id="add-product-modal" class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50 p-4 backdrop-blur-sm">
-        <div class="bg-white rounded-xl shadow-2xl w-full max-w-md overflow-hidden transform transition-all">
-            <div class="bg-slate-900 text-white p-4 flex justify-between items-center">
-                <h3 class="font-bold text-lg">إضافة منتج للمخزن</h3>
-                <button onclick="toggleModal('add-product-modal', false)" class="hover:text-red-300 transition"><i class="ph ph-x text-xl"></i></button>
+    <div id="add-product-modal" class="fixed inset-0 bg-black/60 hidden flex items-center justify-center z-50 p-4 backdrop-blur-sm overflow-y-auto">
+        <div class="bg-white rounded-xl shadow-2xl w-full max-w-md overflow-hidden transform transition-all my-8">
+            <div class="bg-slate-900 text-white px-3 py-2 flex justify-between items-center sticky top-0 z-10">
+                <h3 class="font-bold text-sm">إضافة منتج</h3>
+                <button onclick="toggleModal('add-product-modal', false)" class="hover:text-red-300 transition text-base"><i class="ph ph-x"></i></button>
             </div>
-            <form id="product-form" onsubmit="handleAddProduct(event)" class="p-6 space-y-4">
+            <form id="product-form" onsubmit="handleAddProduct(event)" class="p-5 space-y-3 overflow-y-auto max-h-[calc(100vh-200px)]">
                 <input type="hidden" id="prod-id">
                 <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">كود المنتج</label>
-                    <input required type="text" id="prod-code" class="w-full p-2 border rounded focus:ring-2 focus:ring-amber-500 outline-none">
+                    <label class="block text-xs font-bold text-gray-700 mb-1">كود المنتج</label>
+                    <input required type="text" id="prod-code" class="w-full p-2 border-2 border-gray-300 rounded focus:border-amber-500 outline-none text-sm">
                 </div>
                 <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">نوع الصنف</label>
-                    <input required type="text" id="prod-type" class="w-full p-2 border rounded focus:ring-2 focus:ring-amber-500 outline-none">
+                    <label class="block text-xs font-bold text-gray-700 mb-1">نوع الصنف</label>
+                    <input required type="text" id="prod-type" class="w-full p-2 border-2 border-gray-300 rounded focus:border-amber-500 outline-none text-sm">
                 </div>
-                <div class="grid grid-cols-2 gap-4">
+                <div class="grid grid-cols-2 gap-2">
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">المقاس</label>
-                        <input type="text" id="prod-size" class="w-full p-2 border rounded focus:ring-2 focus:ring-amber-500 outline-none" placeholder="مثال: M, L, 40">
+                        <label class="block text-xs font-bold text-gray-700 mb-1">المقاس</label>
+                        <input type="text" id="prod-size" class="w-full p-2 border-2 border-gray-300 rounded focus:border-amber-500 outline-none text-sm" placeholder="مثال: M, L, 40">
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">اللون</label>
-                        <input type="text" id="prod-color" class="w-full p-2 border rounded focus:ring-2 focus:ring-amber-500 outline-none" placeholder="مثال: أحمر، أزرق">
+                        <label class="block text-xs font-bold text-gray-700 mb-1">اللون</label>
+                        <input type="text" id="prod-color" class="w-full p-2 border-2 border-gray-300 rounded focus:border-amber-500 outline-none text-sm" placeholder="مثال: أحمر، أزرق">
                     </div>
                 </div>
-                <div class="grid grid-cols-2 gap-4">
+                <div class="grid grid-cols-2 gap-2">
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">الوزن (جم)</label>
-                        <input type="number" id="prod-weight" class="w-full p-2 border rounded focus:ring-2 focus:ring-amber-500 outline-none">
+                        <label class="block text-xs font-bold text-gray-700 mb-1">الوزن (جم)</label>
+                        <input type="number" id="prod-weight" class="w-full p-2 border-2 border-gray-300 rounded focus:border-amber-500 outline-none text-sm">
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">الكمية المتاحة</label>
-                        <input required type="number" id="prod-qty" class="w-full p-2 border rounded focus:ring-2 focus:ring-amber-500 outline-none">
+                        <label class="block text-xs font-bold text-gray-700 mb-1">الكمية</label>
+                        <input required type="number" id="prod-qty" class="w-full p-2 border-2 border-gray-300 rounded focus:border-amber-500 outline-none text-sm">
                     </div>
                 </div>
                 <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">سعر البيع (ج.م)</label>
-                    <input required type="number" id="prod-price" class="w-full p-2 border rounded focus:ring-2 focus:ring-amber-500 outline-none">
+                    <label class="block text-xs font-bold text-gray-700 mb-1">السعر (ج.م)</label>
+                    <input required type="number" id="prod-price" class="w-full p-2 border-2 border-gray-300 rounded focus:border-amber-500 outline-none text-sm">
                 </div>
-                <button type="submit" class="w-full bg-amber-600 text-white py-3 rounded-lg font-bold hover:bg-amber-700 mt-4 shadow-md transition">
-                    حفظ في الجهاز
+                <button type="submit" class="w-full bg-amber-600 text-white py-2 rounded-lg font-bold hover:bg-amber-700 shadow-md transition text-sm">
+                    حفظ
                 </button>
             </form>
         </div>
@@ -499,9 +1156,17 @@
                         <p class="text-xs text-gray-500 mt-1 font-bold">اسكان ال qr</p>
                     </div>
                     <div class="w-1/3 bg-slate-50 p-3 border-2 border-slate-800">
-                        <div class="flex justify-between items-center text-lg font-bold text-slate-900">
-                            <span>الإجمالي الكلي:</span>
+                        <div class="flex justify-between items-center text-lg font-bold text-slate-900 mb-2">
+                            <span>الإجمالي:</span>
                             <span id="preview-total-amount">0 ج.م</span>
+                        </div>
+                        <div class="flex justify-between items-center text-lg font-bold text-blue-700 mb-2">
+                            <span>المدفوع:</span>
+                            <span id="preview-paid-amount">0 ج.م</span>
+                        </div>
+                        <div class="flex justify-between items-center text-lg font-bold text-red-600 border-t pt-2">
+                            <span>الرصيد:</span>
+                            <span id="preview-remaining-amount">0 ج.م</span>
                         </div>
                     </div>
                 </div>
@@ -524,54 +1189,55 @@
     </div>
 
     <!-- Modal: Add Incoming -->
-    <div id="add-incoming-modal" class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50 p-4 backdrop-blur-sm">
-        <div class="bg-white rounded-xl shadow-2xl w-full max-w-md overflow-hidden transform transition-all">
-            <div class="bg-slate-900 text-white p-4 flex justify-between items-center">
-                <h3 class="font-bold text-lg" id="incoming-modal-title">إضافة/تعديل وارد</h3>
-                <button onclick="toggleModal('add-incoming-modal', false)" class="hover:text-red-300 transition"><i class="ph ph-x text-xl"></i></button>
+    <div id="add-incoming-modal" class="fixed inset-0 bg-black/60 hidden flex items-center justify-center z-50 p-4 backdrop-blur-sm overflow-y-auto">
+        <div class="bg-white rounded-xl shadow-2xl w-full max-w-md overflow-hidden transform transition-all my-8">
+            <div class="bg-slate-900 text-white px-3 py-2 flex justify-between items-center sticky top-0 z-10">
+                <h3 class="font-bold text-sm" id="incoming-modal-title">إضافة وارد</h3>
+                <button onclick="toggleModal('add-incoming-modal', false)" class="hover:text-red-300 transition text-base"><i class="ph ph-x"></i></button>
             </div>
-            <form id="incoming-form" onsubmit="handleAddIncoming(event)" class="p-6 space-y-4">
+            <form id="incoming-form" onsubmit="handleAddIncoming(event)" class="p-5 space-y-3 overflow-y-auto max-h-[calc(100vh-200px)]">
                 <input type="hidden" id="incoming-id">
                 <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">كود الفاتورة</label>
-                    <input required type="text" id="incoming-code" class="w-full p-2 border rounded focus:ring-2 focus:ring-amber-500 outline-none" placeholder="مثال: INV-001">
+                    <label class="block text-xs font-bold text-gray-700 mb-1">كود الفاتورة</label>
+                    <input required type="text" id="incoming-code" class="w-full p-2 border-2 border-gray-300 rounded focus:border-amber-500 outline-none text-sm" placeholder="مثال: INV-001">
                 </div>
                 <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">تاريخ الفاتورة</label>
-                    <input required type="text" id="incoming-date" class="w-full p-2 border rounded focus:ring-2 focus:ring-amber-500 outline-none" placeholder="مثال: 25/01/2026" oninput="formatArabicDate(this)">
+                    <label class="block text-xs font-bold text-gray-700 mb-1">تاريخ الفاتورة</label>
+                    <input required type="text" id="incoming-date" class="w-full p-2 border-2 border-gray-300 rounded focus:border-amber-500 outline-none text-sm" placeholder="مثال: 25/01/2026" oninput="formatArabicDate(this)">
                 </div>
                 <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">الصنف</label>
-                    <input required type="text" id="incoming-item" class="w-full p-2 border rounded focus:ring-2 focus:ring-amber-500 outline-none" placeholder="نوع الصنف">
+                    <label class="block text-xs font-bold text-gray-700 mb-1">الصنف</label>
+                    <input required type="text" id="incoming-item" class="w-full p-2 border-2 border-gray-300 rounded focus:border-amber-500 outline-none text-sm" placeholder="نوع الصنف">
                 </div>
-                <div class="grid grid-cols-2 gap-4">
+                <div class="grid grid-cols-2 gap-2">
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">اللون</label>
-                        <input type="text" id="incoming-color" class="w-full p-2 border rounded focus:ring-2 focus:ring-amber-500 outline-none" placeholder="مثال: أحمر، أزرق">
+                        <label class="block text-xs font-bold text-gray-700 mb-1">اللون</label>
+                        <input type="text" id="incoming-color" class="w-full p-2 border-2 border-gray-300 rounded focus:border-amber-500 outline-none text-sm" placeholder="مثال: أحمر، أزرق">
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">العدد</label>
-                        <input type="number" id="incoming-quantity" class="w-full p-2 border rounded focus:ring-2 focus:ring-amber-500 outline-none" placeholder="الكمية">
+                        <label class="block text-xs font-bold text-gray-700 mb-1">العدد</label>
+                        <input type="number" id="incoming-quantity" class="w-full p-2 border-2 border-gray-300 rounded focus:border-amber-500 outline-none text-sm" placeholder="الكمية">
                     </div>
                 </div>
-                <div class="grid grid-cols-2 gap-4">
+                <div class="grid grid-cols-2 gap-2">
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">الوزن (كيلو)</label>
-                        <input type="number" step="0.01" id="incoming-weight" class="w-full p-2 border rounded focus:ring-2 focus:ring-amber-500 outline-none" placeholder="الوزن بالكيلو">
+                        <label class="block text-xs font-bold text-gray-700 mb-1">الوزن (كيلو)</label>
+                        <input type="number" step="0.01" id="incoming-weight" class="w-full p-2 border-2 border-gray-300 rounded focus:border-amber-500 outline-none text-sm" placeholder="الوزن">
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">قيمة الفاتورة (ج.م)</label>
-                        <input type="number" step="0.01" id="incoming-value" class="w-full p-2 border rounded focus:ring-2 focus:ring-amber-500 outline-none" placeholder="المبلغ المدفوع">
+                        <label class="block text-xs font-bold text-gray-700 mb-1">القيمة (ج.م)</label>
+                        <input type="number" step="0.01" id="incoming-value" class="w-full p-2 border-2 border-gray-300 rounded focus:border-amber-500 outline-none text-sm" placeholder="القيمة">
                     </div>
+                </div>
                 <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">صورة الفاتورة</label>
-                    <input type="file" id="incoming-image" accept="image/*" class="w-full p-2 border rounded focus:ring-2 focus:ring-amber-500 outline-none" onchange="previewIncomingImage(event)">
+                    <label class="block text-xs font-bold text-gray-700 mb-1">صورة الفاتورة</label>
+                    <input type="file" id="incoming-image" accept="image/*" class="w-full p-2 border-2 border-gray-300 rounded focus:border-amber-500 outline-none text-xs" onchange="previewIncomingImage(event)">
                     <div id="incoming-image-preview" class="mt-2 hidden">
-                        <img id="incoming-image-thumb" class="w-20 h-20 object-cover border rounded" alt="معاينة الصورة">
+                        <img id="incoming-image-thumb" class="w-16 h-16 object-cover border rounded" alt="معاينة الصورة">
                     </div>
                 </div>
-                <button type="submit" id="incoming-submit-btn" class="w-full bg-amber-600 hover:bg-amber-700 text-white py-3 rounded-lg font-bold shadow-md transition">
-                    حفظ الوارد
+                <button type="submit" id="incoming-submit-btn" class="w-full bg-amber-600 hover:bg-amber-700 text-white py-2 rounded-lg font-bold shadow-md transition text-sm">
+                    حفظ
                 </button>
             </form>
         </div>
@@ -582,29 +1248,49 @@
         // Password System - Always require password "000"
         const DEFAULT_PASSWORD = '000';
         let isAuthenticated = false;
+        const REMEMBER_DURATION = 24 * 60 * 60 * 1000; // 24 ساعة
 
-        // Show password prompt immediately on page load
+        // Check if user is remembered on page load
         window.addEventListener('DOMContentLoaded', () => {
-            showPasswordPrompt();
+            checkRememberedUser();
         });
+
+        function checkRememberedUser() {
+            const remembered = localStorage.getItem('alnasr_remembered_time');
+            if (remembered) {
+                const timestamp = Number(remembered);
+                const now = Date.now();
+                if (now - timestamp < REMEMBER_DURATION) {
+                    isAuthenticated = true;
+                    return; // لا تظهر نموذج كلمة المرور
+                } else {
+                    localStorage.removeItem('alnasr_remembered_time');
+                }
+            }
+            showPasswordPrompt();
+        }
 
         function showPasswordPrompt() {
             const modal = document.createElement('div');
             modal.id = 'password-prompt-modal';
-            modal.className = 'fixed inset-0 bg-black/90 flex items-center justify-center z-[999] p-4';
+            modal.className = 'fixed inset-0 bg-black/90 flex items-center justify-center z-[999] p-3';
             modal.innerHTML = `
-                <div class="bg-white rounded-2xl shadow-2xl w-full max-w-md overflow-hidden transform transition-all">
-                    <div class="bg-slate-900 text-white p-6 flex items-center gap-3">
-                        <img src="100.png" alt="لوغو" class="w-10 h-10 object-contain rounded" />
+                <div class="bg-white rounded-2xl shadow-2xl w-full max-w-xs overflow-hidden">
+                    <div class="bg-slate-900 text-white p-4 flex items-center gap-2">
+                        <img src="100.png" alt="لوغو" class="w-9 h-9 object-contain rounded" />
                         <div>
-                            <h2 class="font-bold text-lg">النسر جروب</h2>
-                            <p class="text-xs text-slate-400">إدارة المخزن الشخصي</p>
+                            <h2 class="font-bold text-base text-white">النسر جروب</h2>
+                            <p class="text-xs text-slate-300">إدارة المخزن الشخصي</p>
                         </div>
                     </div>
-                    <div class="p-8 space-y-4">
-                        <h3 class="text-xl font-bold text-slate-800 text-center">أدخل كلمة المرور</h3>
-                        <input type="password" id="password-input" placeholder="كلمة المرور" class="w-full p-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 outline-none" onkeypress="if(event.key==='Enter') checkPassword()">
-                        <button onclick="checkPassword()" class="w-full bg-amber-600 hover:bg-amber-700 text-white py-3 rounded-lg font-bold shadow-md transition">
+                    <div class="p-6 space-y-4">
+                        <h3 class="text-lg font-bold text-center text-slate-900">أدخل كلمة المرور</h3>
+                        <input type="password" id="password-input" placeholder="كلمة المرور" class="w-full px-3 py-2 border-2 border-amber-500 rounded-lg focus:border-amber-600 focus:ring-1 focus:ring-amber-200 outline-none text-slate-800 text-sm" onkeypress="if(event.key==='Enter') checkPassword()">
+                        <div class="flex items-center gap-2 py-1">
+                            <input type="checkbox" id="remember-checkbox" class="w-4 h-4 cursor-pointer">
+                            <label for="remember-checkbox" class="text-slate-700 text-xs cursor-pointer">تذكرني لمدة 24 ساعة</label>
+                        </div>
+                        <button onclick="checkPassword()" class="w-full bg-amber-600 hover:bg-amber-700 text-white py-2 rounded-lg font-bold text-sm transition">
                             دخول
                         </button>
                     </div>
@@ -616,8 +1302,18 @@
 
         window.checkPassword = () => {
             const password = document.getElementById('password-input').value;
+            const rememberCheckbox = document.getElementById('remember-checkbox');
+            
             if (password === DEFAULT_PASSWORD) {
                 isAuthenticated = true;
+                
+                // حفظ وقت التذكر إذا كان مختاراً
+                if (rememberCheckbox && rememberCheckbox.checked) {
+                    localStorage.setItem('alnasr_remembered_time', Date.now().toString());
+                } else {
+                    localStorage.removeItem('alnasr_remembered_time');
+                }
+                
                 const modal = document.getElementById('password-prompt-modal');
                 if (modal) modal.remove();
             } else {
@@ -637,22 +1333,62 @@
                 document.body.classList.remove('fullscreen-mode');
             }
         };
+
+        // Sidebar toggle for mobile
+        window.toggleSidebar = () => {
+            const sidebar = document.getElementById('sidebar');
+            const hamburger = document.getElementById('hamburger-btn');
+            sidebar.classList.toggle('sidebar-open');
+            hamburger.classList.toggle('sidebar-open-btn');
+        };
+
+        // Close sidebar when clicking on a menu item (mobile)
+        function closeSidebarOnMobile() {
+            if (window.innerWidth <= 768) {
+                const sidebar = document.getElementById('sidebar');
+                const hamburger = document.getElementById('hamburger-btn');
+                sidebar.classList.remove('sidebar-open');
+                hamburger.classList.remove('sidebar-open-btn');
+            }
+        }
+
+        // Close sidebar when clicking on overlay (backdrop)
+        document.addEventListener('click', function(event) {
+            if (window.innerWidth <= 768) {
+                const sidebar = document.getElementById('sidebar');
+                const hamburger = document.getElementById('hamburger-btn');
+                
+                // Check if click is outside sidebar and hamburger button
+                if (sidebar && hamburger && !sidebar.contains(event.target) && !hamburger.contains(event.target)) {
+                    if (sidebar.classList.contains('sidebar-open')) {
+                        sidebar.classList.remove('sidebar-open');
+                        hamburger.classList.remove('sidebar-open-btn');
+                    }
+                }
+            }
+        });
         // --- Storage Logic ---
         const DB_KEYS = {
             PRODUCTS: 'alnasr_products',
             INVOICES: 'alnasr_invoices',
-            INCOMING: 'alnasr_incoming'
+            INCOMING: 'alnasr_incoming',
+            EMPLOYEES: 'alnasr_employees',
+            ATTENDANCE: 'alnasr_attendance'
         };
 
         let products = JSON.parse(localStorage.getItem(DB_KEYS.PRODUCTS)) || [];
         let invoices = JSON.parse(localStorage.getItem(DB_KEYS.INVOICES)) || [];
         let incoming = JSON.parse(localStorage.getItem(DB_KEYS.INCOMING)) || [];
+        let employees = JSON.parse(localStorage.getItem(DB_KEYS.EMPLOYEES)) || [];
+        let attendance = JSON.parse(localStorage.getItem(DB_KEYS.ATTENDANCE)) || [];
         let cart = [];
 
         function saveData() {
             localStorage.setItem(DB_KEYS.PRODUCTS, JSON.stringify(products));
             localStorage.setItem(DB_KEYS.INVOICES, JSON.stringify(invoices));
             localStorage.setItem(DB_KEYS.INCOMING, JSON.stringify(incoming));
+            localStorage.setItem(DB_KEYS.EMPLOYEES, JSON.stringify(employees));
+            localStorage.setItem(DB_KEYS.ATTENDANCE, JSON.stringify(attendance));
             renderAll();
         }
 
@@ -660,9 +1396,60 @@
         window.onload = () => {
             renderAll();
             document.getElementById('inv-date-display').value = new Date().toLocaleDateString('ar-EG');
+            
+            // Set today's date in attendance form (Arabic format)
+            const today = new Date();
+            const attDateInput = document.getElementById('att-date');
+            if (attDateInput) {
+                attDateInput.value = formatDateToArabic(today);
+            }
+            
+            // Adjust layout on mobile
+            if (window.innerWidth <= 768) {
+                const viewSections = document.querySelectorAll('.view-section');
+                viewSections.forEach(section => {
+                    section.style.paddingTop = '20px';
+                });
+            }
+            
             setInterval(() => {
                 document.getElementById('current-time-display').innerText = new Date().toLocaleString('ar-EG');
             }, 1000);
+        };
+
+        // Convert date to Arabic format: DD/MM/YYYY
+        function formatDateToArabic(dateObj) {
+            const day = String(dateObj.getDate()).padStart(2, '0');
+            const month = String(dateObj.getMonth() + 1).padStart(2, '0');
+            const year = dateObj.getFullYear();
+            return `${day}/${month}/${year}`;
+        }
+
+        // Parse Arabic date format DD/MM/YYYY to ISO format YYYY-MM-DD for storage
+        function parseArabicDate(dateStr) {
+            const parts = dateStr.split('/');
+            if (parts.length !== 3) return null;
+            const day = parts[0].trim();
+            const month = parts[1].trim();
+            const year = parts[2].trim();
+            return `${year}-${month}-${day}`;
+        }
+
+        // Format user input for Arabic dates
+        window.formatArabicDateInput = (input) => {
+            let value = input.value.replace(/[^0-9/]/g, '');
+            
+            if (value.length === 2 && !value.includes('/')) {
+                value = value + '/';
+            } else if (value.length === 5 && value.split('/').length === 2) {
+                value = value + '/';
+            }
+            
+            if (value.length > 10) {
+                value = value.substring(0, 10);
+            }
+            
+            input.value = value;
         };
 
         function renderAll() {
@@ -671,12 +1458,16 @@
             renderHistoryTable();
             renderIncomingTable();
             updateProductDropdown();
+            renderEmployees();
+            updateAttendanceDropdown();
+            renderAttendanceTable();
+            renderSalarySummary();
         }
 
         // --- Tabs Navigation ---
         window.switchTab = (tabName) => {
             // Hide all view sections
-            const views = ['dashboard', 'inventory', 'invoices', 'history', 'incoming', 'backup'];
+            const views = ['dashboard', 'inventory', 'invoices', 'history', 'incoming', 'employees', 'backup'];
             views.forEach(view => {
                 const element = document.getElementById(`view-${view}`);
                 if (element) {
@@ -702,6 +1493,9 @@
                 selectedBtn.classList.remove('text-slate-300', 'hover:bg-slate-800');
                 selectedBtn.classList.add('bg-amber-600', 'text-white', 'shadow-md');
             }
+
+            // Close sidebar on mobile
+            closeSidebarOnMobile();
         };
 
         // --- Dashboard Logic ---
@@ -788,27 +1582,27 @@
             filtered.forEach(p => {
                 const isLow = p.quantity < 5;
                 const infoHTML = `
-                    ${p.type || ''}
-                    ${p.size ? `<div class="text-xs text-gray-400 mt-1">المقاس: ${p.size}</div>` : ''}
-                    ${p.color ? `<div class="text-xs text-gray-400 mt-1">اللون: ${p.color}</div>` : ''}
+                    <span class="font-bold">${p.type || ''}</span>
+                    ${p.size ? `<div class="text-xs text-gray-500 mt-0.5">المقاس: ${p.size}</div>` : ''}
+                    ${p.color ? `<div class="text-xs text-gray-500 mt-0.5">اللون: ${p.color}</div>` : ''}
                 `;
                 tbody.innerHTML += `
-                    <tr class="hover:bg-slate-50 border-b">
-                        <td class="p-4 font-mono font-bold">${p.code}</td>
-                        <td class="p-4">${infoHTML}</td>
-                        <td class="p-4 text-gray-500">${p.weight || '0'} جم</td>
-                        <td class="p-4 font-bold">${p.price} ج.م</td>
-                        <td class="p-4">
-                            <span class="px-3 py-1 rounded-full text-xs font-bold ${isLow ? 'bg-red-100 text-red-600' : 'bg-emerald-100 text-emerald-600'}">
+                    <tr class="hover:bg-blue-50 border-b transition">
+                        <td class="p-3 font-mono font-bold text-amber-700 text-xs">${p.code}</td>
+                        <td class="p-3 text-xs">${infoHTML}</td>
+                        <td class="p-3 text-gray-600 text-xs hidden-mobile">${p.weight || '0'}g</td>
+                        <td class="p-3 font-bold text-sm">${p.price}</td>
+                        <td class="p-3">
+                            <span class="px-2 py-1 rounded text-xs font-bold ${isLow ? 'bg-red-100 text-red-600' : 'bg-green-100 text-green-600'}">
                                 ${p.quantity}
                             </span>
                         </td>
-                        <td class="p-4 flex gap-2">
-                            <button onclick="editProduct('${p.id}')" class="text-sky-500 hover:text-sky-700 transition">
-                                <i class="ph ph-pencil text-xl"></i>
+                        <td class="p-3 flex gap-1 justify-center">
+                            <button onclick="editProduct('${p.id}')" class="text-blue-600 hover:text-blue-800 transition bg-blue-50 hover:bg-blue-100 p-2 rounded" title="تعديل">
+                                <i class="ph ph-pencil text-sm"></i>
                             </button>
-                            <button onclick="deleteProduct('${p.id}')" class="text-red-400 hover:text-red-600 transition">
-                                <i class="ph ph-trash text-xl"></i>
+                            <button onclick="deleteProduct('${p.id}')" class="text-red-600 hover:text-red-800 transition bg-red-50 hover:bg-red-100 p-2 rounded" title="حذف">
+                                <i class="ph ph-trash text-sm"></i>
                             </button>
                         </td>
                     </tr>
@@ -901,6 +1695,30 @@
             document.getElementById('summary-total').innerText = total + ' ج.م';
             document.getElementById('btn-save-invoice').disabled = cart.length === 0;
             document.getElementById('btn-print-now').disabled = cart.length === 0;
+            updateRemainingBalance();
+        }
+
+        // حساب الرصيد المتبقي
+        function updateRemainingBalance() {
+            const totalElement = document.getElementById('summary-total');
+            const paidInput = document.getElementById('inv-paid-amount');
+            const balanceElement = document.getElementById('remaining-balance');
+            
+            const totalText = totalElement.innerText.replace(' ج.م', '');
+            const total = Number(totalText) || 0;
+            const paid = Number(paidInput.value) || 0;
+            const remaining = total - paid;
+            
+            if (remaining > 0) {
+                balanceElement.innerText = remaining + ' ج.م';
+                balanceElement.className = 'font-bold text-red-600 text-xl';
+            } else if (remaining === 0) {
+                balanceElement.innerText = 'تم السداد كاملاً ✓';
+                balanceElement.className = 'font-bold text-green-600 text-xl';
+            } else {
+                balanceElement.innerText = Math.abs(remaining) + ' ج.م (رصيد)';
+                balanceElement.className = 'font-bold text-blue-600 text-xl';
+            }
         }
 
         // --- Incoming Logic ---
@@ -1139,6 +1957,8 @@
         window.saveInvoice = () => {
             const customer = document.getElementById('inv-customer-name').value || 'عميل نقدي';
             const total = cart.reduce((s, i) => s + i.total, 0);
+            const paidAmount = Number(document.getElementById('inv-paid-amount').value) || 0;
+            const remainingBalance = total - paidAmount;
             
             const newInvoice = {
                 id: Date.now().toString(),
@@ -1146,7 +1966,9 @@
                 date: new Date().toISOString(),
                 customerName: customer,
                 items: [...cart],
-                totalAmount: total
+                totalAmount: total,
+                paidAmount: paidAmount,
+                remainingBalance: remainingBalance
             };
 
             // Update stock
@@ -1162,6 +1984,7 @@
             openPreview(newInvoice);
             cart = [];
             document.getElementById('inv-customer-name').value = '';
+            document.getElementById('inv-paid-amount').value = '0';
             renderCart();
         };
 
@@ -1188,16 +2011,24 @@
             const tbody = document.getElementById('history-table-body');
             tbody.innerHTML = '';
             [...invoices].reverse().forEach(inv => {
+                const remaining = (inv.remainingBalance !== undefined) ? inv.remainingBalance : (inv.totalAmount - 0);
+                const paid = (inv.paidAmount !== undefined) ? inv.paidAmount : 0;
+                const balanceClass = remaining > 0 ? 'text-red-600 font-bold' : remaining === 0 ? 'text-green-600 font-bold' : 'text-blue-600 font-bold';
+                const balanceText = remaining > 0 ? `${remaining} ج.م` : remaining === 0 ? 'مدفوع ✓' : `${Math.abs(remaining)} رصيد`;
+                
                 tbody.innerHTML += `
-                    <tr class="hover:bg-gray-50 border-b transition">
-                        <td class="p-4 font-mono font-bold text-amber-700">${inv.invoiceNumber}</td>
-                        <td class="p-4 text-sm">${new Date(inv.date).toLocaleDateString('ar-EG')}</td>
-                        <td class="p-4 font-bold">${inv.customerName}</td>
-                        <td class="p-4">${inv.items.length}</td>
-                        <td class="p-4 font-bold text-emerald-600">${inv.totalAmount} ج.م</td>
-                        <td class="p-4 flex gap-2">
-                            <button onclick="reprint('${inv.id}')" class="bg-blue-50 text-blue-600 p-2 rounded hover:bg-blue-100"><i class="ph ph-printer text-xl"></i></button>
-                            <button onclick="deleteInvoice('${inv.id}')" class="bg-red-50 text-red-500 p-2 rounded hover:bg-red-100"><i class="ph ph-trash text-xl"></i></button>
+                    <tr class="hover:bg-blue-50 border-b transition">
+                        <td class="p-3 font-mono font-bold text-amber-700 text-xs">${inv.invoiceNumber}</td>
+                        <td class="p-3 text-xs">${new Date(inv.date).toLocaleDateString('ar-EG')}</td>
+                        <td class="p-3 font-bold text-xs">${inv.customerName}</td>
+                        <td class="p-3 text-xs font-bold hidden-mobile">${inv.items.length}</td>
+                        <td class="p-3 font-bold text-emerald-600 text-xs">${inv.totalAmount}</td>
+                        <td class="p-3 font-bold text-blue-700 text-xs hidden-mobile">${paid}</td>
+                        <td class="p-3 text-xs ${balanceClass}">${balanceText}</td>
+                        <td class="p-3 flex gap-0.5 justify-center flex-wrap">
+                            <button onclick="reprint('${inv.id}')" title="طباعة" class="bg-blue-600 text-white rounded hover:bg-blue-700 transition" style="width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;"><i class="ph ph-printer text-base"></i></button>
+                            <button onclick="editPayment('${inv.id}')" title="تعديل" class="bg-amber-600 text-white rounded hover:bg-amber-700 transition" style="width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;"><i class="ph ph-pencil text-base"></i></button>
+                            <button onclick="deleteInvoice('${inv.id}')" title="حذف" class="bg-red-600 text-white rounded hover:bg-red-700 transition" style="width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;"><i class="ph ph-trash text-base"></i></button>
                         </td>
                     </tr>
                 `;
@@ -1209,10 +2040,30 @@
             if(inv) openPreview(inv);
         };
 
+        window.editPayment = (id) => {
+            const inv = invoices.find(i => i.id === id);
+            if(!inv) return alert('الفاتورة غير موجودة');
+            
+            const newPaid = prompt(`الفاتورة: ${inv.invoiceNumber}\nالإجمالي: ${inv.totalAmount} ج.م\nالمدفوع حالياً: ${inv.paidAmount || 0} ج.م\n\nأدخل المبلغ المدفوع الجديد:`, inv.paidAmount || 0);
+            
+            if(newPaid !== null) {
+                const amount = Number(newPaid);
+                if(isNaN(amount) || amount < 0) {
+                    return alert('المبلغ غير صحيح');
+                }
+                inv.paidAmount = amount;
+                inv.remainingBalance = inv.totalAmount - amount;
+                saveData();
+                renderHistoryTable();
+                alert(`تم تحديث الدفع\nالمدفوع: ${amount} ج.م\nالرصيد المتبقي: ${inv.remainingBalance} ج.م`);
+            }
+        };
+
         window.deleteInvoice = (id) => {
             if(confirm('حذف سجل هذه الفاتورة من جهازك؟')) {
                 invoices = invoices.filter(i => i.id !== id);
                 saveData();
+                renderHistoryTable();
             }
         };
 
@@ -1221,6 +2072,12 @@
             document.getElementById('preview-inv-date').innerText = new Date(inv.date).toLocaleDateString('ar-EG');
             document.getElementById('preview-customer').innerText = inv.customerName;
             document.getElementById('preview-total-amount').innerText = inv.totalAmount + ' ج.م';
+            
+            const paidAmount = inv.paidAmount || 0;
+            const remainingBalance = inv.remainingBalance !== undefined ? inv.remainingBalance : (inv.totalAmount - paidAmount);
+            
+            document.getElementById('preview-paid-amount').innerText = paidAmount + ' ج.م';
+            document.getElementById('preview-remaining-amount').innerText = remainingBalance + ' ج.م';
             
             const tbody = document.getElementById('preview-items-body');
             tbody.innerHTML = '';
@@ -1242,6 +2099,147 @@
         }
 
         // Data Export/Import functions
+        // --- Employees Logic ---
+        function countSundaysInMonth(year, monthIndex) {
+            let d = new Date(year, monthIndex, 1);
+            let sundays = 0;
+            while (d.getMonth() === monthIndex) {
+                if (d.getDay() === 0) sundays++;
+                d.setDate(d.getDate() + 1);
+            }
+            return sundays;
+        }
+
+        function workingDaysInMonth(year, monthIndex) {
+            const totalDays = new Date(year, monthIndex + 1, 0).getDate();
+            return totalDays - countSundaysInMonth(year, monthIndex);
+        }
+
+        function calculateDailyRate(monthlySalary, year, monthIndex) {
+            const wd = workingDaysInMonth(year, monthIndex);
+            if (!wd) return 0;
+            return Number(monthlySalary) / wd;
+        }
+
+        window.calculateDailyForForm = () => {
+            const monthVal = document.getElementById('emp-month').value;
+            const monthly = Number(document.getElementById('emp-monthly').value || 0);
+            let year, monthIndex;
+            if (monthVal) {
+                const parts = monthVal.split('-');
+                year = parseInt(parts[0], 10);
+                monthIndex = parseInt(parts[1], 10) - 1;
+            } else {
+                const now = new Date();
+                year = now.getFullYear();
+                monthIndex = now.getMonth();
+                document.getElementById('emp-month').value = `${year}-${String(monthIndex + 1).padStart(2, '0')}`;
+            }
+
+            const days = workingDaysInMonth(year, monthIndex);
+            const daily = calculateDailyRate(monthly, year, monthIndex);
+
+            document.getElementById('emp-working-days').value = days + ' يوم';
+            document.getElementById('emp-daily-rate').value = daily ? daily.toFixed(2) + ' ج.م' : '0 ج.م';
+        };
+
+        window.resetEmployeeForm = () => {
+            document.getElementById('employee-form').reset();
+            document.getElementById('emp-id').value = '';
+            document.getElementById('emp-working-days').value = '';
+            document.getElementById('emp-daily-rate').value = '';
+        };
+
+        window.handleEmployeeForm = (e) => {
+            e.preventDefault();
+            const id = document.getElementById('emp-id').value;
+            const name = document.getElementById('emp-name').value.trim();
+            const phone = document.getElementById('emp-phone').value.trim();
+            const monthly = Number(document.getElementById('emp-monthly').value || 0);
+            const monthVal = document.getElementById('emp-month').value;
+
+            let year, monthIndex;
+            if (monthVal) {
+                const parts = monthVal.split('-');
+                year = parseInt(parts[0], 10);
+                monthIndex = parseInt(parts[1], 10) - 1;
+            } else {
+                const now = new Date();
+                year = now.getFullYear();
+                monthIndex = now.getMonth();
+            }
+
+            const days = workingDaysInMonth(year, monthIndex);
+            const daily = calculateDailyRate(monthly, year, monthIndex);
+
+            if (id) {
+                const idx = employees.findIndex(x => x.id === id);
+                if (idx !== -1) {
+                    employees[idx] = { ...employees[idx], name, phone, monthly, calcMonth: monthVal, workingDays: days, dailyRate: daily };
+                    saveData();
+                    showNotification('تم تحديث بيانات الموظف');
+                    resetEmployeeForm();
+                    return;
+                }
+            }
+
+            const emp = {
+                id: Date.now().toString(),
+                name,
+                phone,
+                monthly,
+                calcMonth: monthVal,
+                workingDays: days,
+                dailyRate: daily
+            };
+
+            employees.push(emp);
+            saveData();
+            showNotification('تم حفظ الموظف بنجاح');
+            resetEmployeeForm();
+        };
+
+        function renderEmployees() {
+            const tbody = document.getElementById('employees-table-body');
+            if(!tbody) return;
+            tbody.innerHTML = employees.length ? '' : '<tr><td colspan="5" class="p-4 text-center text-gray-400">لا يوجد موظفين</td></tr>';
+
+            employees.forEach(emp => {
+                const displayRate = emp.dailyRate ? Number(emp.dailyRate).toLocaleString() + ' ج.م' : '-';
+                tbody.innerHTML += `
+                    <tr class="hover:bg-gray-50 border-b">
+                        <td class="p-4 font-bold">${emp.name}</td>
+                        <td class="p-4">${emp.phone}</td>
+                        <td class="p-4 font-bold">${emp.monthly}</td>
+                        <td class="p-4 font-bold text-emerald-600">${displayRate}</td>
+                        <td class="p-4 flex gap-2">
+                            <button onclick="editEmployee('${emp.id}')" class="text-sky-500 hover:text-sky-700"><i class="ph ph-pencil text-lg"></i></button>
+                            <button onclick="deleteEmployee('${emp.id}')" class="text-red-500 hover:text-red-700"><i class="ph ph-trash text-lg"></i></button>
+                        </td>
+                    </tr>
+                `;
+            });
+        }
+
+        window.deleteEmployee = (id) => {
+            if (confirm('هل تريد حذف هذا الموظف من جهازك؟')) {
+                employees = employees.filter(e => e.id !== id);
+                saveData();
+                showNotification('تم حذف الموظف');
+            }
+        };
+
+        window.editEmployee = (id) => {
+            const emp = employees.find(e => e.id === id);
+            if (!emp) return;
+            document.getElementById('emp-id').value = emp.id;
+            document.getElementById('emp-name').value = emp.name || '';
+            document.getElementById('emp-phone').value = emp.phone || '';
+            document.getElementById('emp-monthly').value = emp.monthly || '';
+            if (emp.calcMonth) document.getElementById('emp-month').value = emp.calcMonth;
+            document.getElementById('emp-working-days').value = emp.workingDays ? emp.workingDays + ' يوم' : '';
+            document.getElementById('emp-daily-rate').value = emp.dailyRate ? Number(emp.dailyRate).toFixed(2) + ' ج.م' : '';
+        };
         window.exportData = () => {
             const data = {
                 products: products,
@@ -1336,6 +2334,151 @@
                 toast.classList.add('opacity-0', 'pointer-events-none');
             }, 3000);
         };
+
+        // --- Attendance Logic ---
+        function updateAttendanceDropdown() {
+            const select = document.getElementById('att-employee');
+            if (!select) return;
+            const currentValue = select.value;
+            select.innerHTML = '<option value="">-- اختر موظف --</option>';
+            employees.forEach(emp => {
+                select.innerHTML += `<option value="${emp.id}">${emp.name}</option>`;
+            });
+            select.value = currentValue;
+        }
+
+        window.handleAttendanceForm = (e) => {
+            e.preventDefault();
+            const empId = document.getElementById('att-employee').value;
+            const dateStr = document.getElementById('att-date').value; // Arabic format DD/MM/YYYY
+            const status = document.getElementById('att-status').value;
+
+            if (!empId || !dateStr || !status) {
+                showNotification('يرجى ملء جميع الحقول', 'error');
+                return;
+            }
+
+            const dateISO = parseArabicDate(dateStr);
+            if (!dateISO) {
+                showNotification('صيغة التاريخ غير صحيحة. استخدم DD/MM/YYYY', 'error');
+                return;
+            }
+
+            const emp = employees.find(x => x.id === empId);
+            if (!emp) return;
+
+            // Check if record already exists for this date/employee
+            const existingIdx = attendance.findIndex(a => a.empId === empId && a.date === dateISO);
+            if (existingIdx !== -1) {
+                attendance[existingIdx] = { ...attendance[existingIdx], status, updatedAt: new Date().toISOString() };
+                showNotification('تم تحديث الحضور');
+            } else {
+                attendance.push({
+                    id: Date.now().toString(),
+                    empId,
+                    empName: emp.name,
+                    date: dateISO,
+                    status,
+                    createdAt: new Date().toISOString()
+                });
+                showNotification('تم حفظ الحضور بنجاح');
+            }
+
+            saveData();
+            document.getElementById('attendance-form').reset();
+            const today = new Date();
+            document.getElementById('att-date').value = formatDateToArabic(today);
+        };
+
+        function renderAttendanceTable() {
+            const tbody = document.getElementById('attendance-table-body');
+            if (!tbody) return;
+            tbody.innerHTML = attendance.length ? '' : '<tr><td colspan="4" class="p-4 text-center text-gray-400">لا توجد سجلات حضور</td></tr>';
+
+            const statusMap = { present: 'حاضر ✓', absent: 'غياب ✗', half: 'نصف يوم 50%' };
+            const statusColors = { present: 'bg-green-100 text-green-700', absent: 'bg-red-100 text-red-700', half: 'bg-yellow-100 text-yellow-700' };
+
+            [...attendance].reverse().forEach(att => {
+                const displayDate = att.date; // Already in ISO format, display as-is or parse as needed
+                tbody.innerHTML += `
+                    <tr class="hover:bg-gray-50 border-b">
+                        <td class="p-4">${displayDate}</td>
+                        <td class="p-4 font-bold">${att.empName}</td>
+                        <td class="p-4"><span class="px-3 py-1 rounded-full text-xs font-bold ${statusColors[att.status]}">${statusMap[att.status]}</span></td>
+                        <td class="p-4"><button onclick="deleteAttendance('${att.id}')" class="text-red-500 hover:text-red-700"><i class="ph ph-trash text-lg"></i></button></td>
+                    </tr>
+                `;
+            });
+        }
+
+        window.deleteAttendance = (id) => {
+            if (confirm('هل تريد حذف هذا السجل؟')) {
+                attendance = attendance.filter(a => a.id !== id);
+                saveData();
+                showNotification('تم حذف السجل');
+            }
+        };
+
+        function calculateAttendanceDays(empId, calcMonth) {
+            if (!calcMonth) {
+                const now = new Date();
+                calcMonth = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}`;
+            }
+
+            const year = parseInt(calcMonth.split('-')[0]);
+            const month = parseInt(calcMonth.split('-')[1]) - 1;
+
+            const monthStart = new Date(year, month, 1);
+            const monthEnd = new Date(year, month + 1, 0);
+
+            let presentDays = 0;
+            attendance.forEach(att => {
+                if (att.empId === empId) {
+                    const attDate = new Date(att.date + 'T00:00:00');
+                    if (attDate >= monthStart && attDate <= monthEnd) {
+                        if (att.status === 'present') presentDays += 1;
+                        else if (att.status === 'half') presentDays += 0.5;
+                    }
+                }
+            });
+
+            return presentDays;
+        }
+
+        function renderSalarySummary() {
+            const tbody = document.getElementById('salary-summary-body');
+            if (!tbody) return;
+            tbody.innerHTML = '';
+
+            if (employees.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="6" class="p-4 text-center text-gray-400">لا يوجد موظفين</td></tr>';
+                return;
+            }
+
+            employees.forEach(emp => {
+                const now = new Date();
+                const calcMonth = emp.calcMonth || `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}`;
+                
+                const year = parseInt(calcMonth.split('-')[0]);
+                const month = parseInt(calcMonth.split('-')[1]) - 1;
+                const workingDays = workingDaysInMonth(year, month);
+                const presentDays = calculateAttendanceDays(emp.id, calcMonth);
+                const dailyRate = calculateDailyRate(emp.monthly, year, month);
+                const finalSalary = presentDays * dailyRate;
+
+                tbody.innerHTML += `
+                    <tr class="hover:bg-white transition">
+                        <td class="p-3 font-bold">${emp.name}</td>
+                        <td class="p-3">${emp.monthly} ج.م</td>
+                        <td class="p-3">${workingDays} يوم</td>
+                        <td class="p-3 font-bold text-blue-600">${presentDays} أيام</td>
+                        <td class="p-3">${dailyRate.toFixed(2)} ج.م</td>
+                        <td class="p-3 font-bold text-emerald-600 text-lg">${finalSalary.toFixed(2)} ج.م</td>
+                    </tr>
+                `;
+            });
+        }
     </script>
 </body>
 </html>
+
