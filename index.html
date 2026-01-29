@@ -74,13 +74,13 @@
                 flex: 1;
                 width: 100%;
                 padding: 0 !important;
-                background-color: #f0f4f8;
+                background-color: #f5f7fa;
             }
             
             .view-section {
-                padding: 20px !important;
+                padding: 14px !important;
                 margin-top: 70px;
-                background-color: #f0f4f8;
+                background-color: #f5f7fa;
             }
         }
 
@@ -99,7 +99,8 @@
         /* Mobile responsiveness (improved) */
         @media (max-width: 768px) {
             body {
-                font-size: 16px;
+                font-size: 15px;
+                background-color: #f5f7fa;
             }
             
             #main-content {
@@ -109,79 +110,85 @@
             }
             
             .view-section {
-                padding: 16px !important;
+                padding: 14px !important;
                 margin-top: 0;
+                background-color: #f5f7fa;
             }
             
             h1 {
                 font-size: 1.75rem !important;
                 color: #fbbf24 !important;
                 font-weight: bold !important;
-                margin: 0 !important;
+                margin: 0 0 16px 0 !important;
             }
             
             h2 {
-                font-size: 1.5rem !important;
+                font-size: 1.4rem !important;
                 color: #1e293b !important;
                 font-weight: 700 !important;
-                margin: 12px 0 !important;
+                margin: 16px 0 14px 0 !important;
+                padding-bottom: 8px;
+                border-bottom: 2px solid #e2e8f0;
             }
             
             h3 {
-                font-size: 1.25rem !important;
+                font-size: 1.15rem !important;
                 color: #1e293b !important;
                 font-weight: 700 !important;
-                margin: 12px 0 !important;
+                margin: 14px 0 10px 0 !important;
             }
             
             p, span, label {
-                font-size: 15px !important;
+                font-size: 14px !important;
                 color: #475569 !important;
                 font-weight: 500 !important;
-                line-height: 1.6 !important;
+                line-height: 1.55 !important;
             }
             
             label {
                 color: #1e293b !important;
                 display: block !important;
-                margin-bottom: 8px !important;
+                margin-bottom: 6px !important;
                 font-weight: 600 !important;
+                font-size: 13px !important;
             }
             
             .grid {
                 grid-template-columns: 1fr !important;
-                gap: 16px !important;
+                gap: 14px !important;
             }
             
             table {
-                font-size: 14px;
-                border: 2px solid #cbd5e1;
-                margin: 16px 0 !important;
+                font-size: 13px;
+                border: 1px solid #cbd5e1;
+                margin: 14px 0 !important;
                 border-radius: 8px;
                 overflow: hidden;
                 width: 100%;
                 border-collapse: collapse;
+                background-color: white;
             }
             
             th {
                 background: linear-gradient(135deg, #1e293b, #334155) !important;
                 color: white !important;
-                font-weight: 800 !important;
-                padding: 16px 12px !important;
+                font-weight: 700 !important;
+                padding: 12px 10px !important;
                 border: none !important;
                 text-align: right;
-                font-size: 14px !important;
+                font-size: 12px !important;
+                line-height: 1.4;
             }
             
             td {
-                padding: 14px 12px !important;
+                padding: 12px 10px !important;
                 border-bottom: 1px solid #e2e8f0 !important;
                 color: #334155 !important;
-                font-size: 14px !important;
+                font-size: 13px !important;
             }
             
             tr:hover {
-                background-color: #e8f4f8 !important;
+                background-color: #f0f4f8 !important;
             }
             
             tbody tr {
@@ -189,18 +196,19 @@
             }
             
             tbody tr:nth-child(even) {
-                background-color: #f9fafb;
+                background-color: #fafbfc;
             }
             
             button {
-                padding: 14px 18px !important;
-                font-size: 15px !important;
+                padding: 12px 16px !important;
+                font-size: 14px !important;
                 font-weight: 700 !important;
                 border: none !important;
                 border-radius: 8px !important;
                 cursor: pointer !important;
                 transition: all 0.2s !important;
-                margin-bottom: 8px !important;
+                margin-bottom: 10px !important;
+                line-height: 1.4;
             }
             
             button:active {
@@ -208,54 +216,57 @@
             }
             
             input, select, textarea {
-                padding: 12px 14px !important;
-                font-size: 16px !important;
+                padding: 11px 12px !important;
+                font-size: 15px !important;
                 border: 2px solid #cbd5e1 !important;
                 border-radius: 6px !important;
                 background-color: white !important;
                 color: #1e293b !important;
                 width: 100% !important;
-                margin-bottom: 12px !important;
+                margin-bottom: 10px !important;
                 box-sizing: border-box !important;
             }
             
             input:focus, select:focus, textarea:focus {
                 border-color: #f59e0b !important;
                 outline: none !important;
-                box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.1) !important;
+                box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1) !important;
             }
             
             .bg-white {
                 background-color: white !important;
+                border-radius: 12px !important;
+                margin-bottom: 14px !important;
+                border: 1px solid #e2e8f0 !important;
             }
             
             .rounded-xl {
                 border-radius: 12px !important;
-                margin-bottom: 16px !important;
+                margin-bottom: 14px !important;
             }
             
             .p-6 {
-                padding: 20px !important;
+                padding: 14px !important;
             }
             
             .p-4 {
-                padding: 16px !important;
-            }
-            
-            .p-8 {
-                padding: 24px !important;
-            }
-            
-            .p-3 {
                 padding: 12px !important;
             }
             
+            .p-8 {
+                padding: 14px !important;
+            }
+            
+            .p-3 {
+                padding: 10px !important;
+            }
+            
             .gap-4 {
-                gap: 16px !important;
+                gap: 14px !important;
             }
             
             .gap-6 {
-                gap: 20px !important;
+                gap: 16px !important;
             }
             
             .gap-2 {
@@ -263,19 +274,23 @@
             }
             
             .space-y-6 > * + * {
-                margin-top: 24px !important;
+                margin-top: 14px !important;
+            }
+            
+            .space-y-4 > * + * {
+                margin-top: 12px !important;
             }
             
             .mb-6 {
-                margin-bottom: 24px !important;
+                margin-bottom: 16px !important;
             }
             
             .mt-6 {
-                margin-top: 24px !important;
+                margin-top: 16px !important;
             }
             
             .mt-8 {
-                margin-top: 32px !important;
+                margin-top: 16px !important;
             }
             
             .overflow-x-auto {
@@ -284,51 +299,14 @@
                 border-radius: 8px;
             }
             
-            /* Improved spacing */
-            body {
-                background-color: #f8fafc;
-            }
-            
-            .bg-white {
-                background-color: white !important;
-                border-radius: 12px !important;
-                margin-bottom: 16px !important;
-                border: 1px solid #e2e8f0 !important;
-            }
-            
-            .rounded-xl {
-                border-radius: 12px !important;
-                margin-bottom: 16px !important;
-            }
-            
-            label {
-                font-weight: 600 !important;
-                margin-bottom: 8px !important;
-            }
-            
-            input, select, textarea {
-                margin-bottom: 12px !important;
-                box-sizing: border-box !important;
-            }
-            
             input[readonly], input[disabled] {
                 background-color: #f1f5f9 !important;
                 color: #64748b !important;
             }
             
-            button {
-                margin-bottom: 8px !important;
-            }
-            
-            table {
-                margin: 16px 0 !important;
-                border-radius: 8px;
-                overflow: hidden;
-            }
-            
             /* Form groups */
             form > div {
-                margin-bottom: 12px !important;
+                margin-bottom: 10px !important;
             }
             
             form > div:last-child {
@@ -338,11 +316,11 @@
             .flex.justify-between.items-center {
                 flex-direction: column;
                 gap: 12px;
-                align-items: flex-start !important;
+                align-items: stretch !important;
             }
             
             p, span {
-                line-height: 1.6 !important;
+                line-height: 1.55 !important;
             }
         }
 
@@ -351,6 +329,96 @@
         ::-webkit-scrollbar-track { background: #f1f1f1; }
         ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
 
+        /* Modal header / brand - compact slightly darker white header with soft accent */
+        .modal-header {
+            background: #f3efe9; /* slightly darker than pure white */
+            color: #0f172a;
+            padding: 8px 12px;
+            border-radius: 16px 16px 0 0;
+            border-bottom: 1px solid rgba(15,23,42,0.06);
+            box-shadow: 0 1px 6px rgba(2,6,23,0.06);
+            position: relative;
+        }
+
+        .modal-header .icon-wrapper {
+            background: rgba(180,83,9,0.08); /* soft amber background for icon */
+            color: #b45309; /* amber icon color */
+            padding: 6px;
+            border-radius: 8px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 34px;
+            height: 34px;
+        }
+
+        .modal-header h3 { color: #0f172a; font-size: 15px; margin: 0; }
+        .modal-header p { color: #6b7280; font-size: 12px; margin: 0; }
+
+        .modal-header button { background: transparent; color: #0f172a; padding: 6px; border-radius: 8px; }
+
+        /* CTA button used in modals (muted amber) */
+        .modal-cta {
+            background-color: #b45309;
+            color: white;
+        }
+
+        /* Mobile-specific: move close button to top-left and adjust padding */
+        @media (max-width: 768px) {
+            .modal-header {
+                padding: 10px 12px 12px 52px; /* extra left padding to avoid overlap with button */
+            }
+
+            .modal-header button {
+                position: absolute;
+                top: 8px;
+                left: 8px; /* top-left on mobile */
+                background: rgba(15,23,42,0.04);
+                backdrop-filter: blur(2px);
+            }
+        }
+
+        /* Dashboard mobile styling - Enhanced */
+        @media (max-width: 768px) {
+            #view-dashboard {
+                padding: 14px !important;
+                background-color: #f5f7fa;
+            }
+            
+            #view-dashboard h2 {
+                font-size: 1.35rem !important;
+                margin-bottom: 16px !important;
+                padding-bottom: 10px;
+                border-bottom: 3px solid #fbbf24;
+                color: #1e293b;
+                font-weight: 700;
+            }
+            
+            #view-dashboard .grid {
+                gap: 10px !important;
+                margin-bottom: 14px;
+            }
+            
+            #view-dashboard .bg-white {
+                padding: 12px !important;
+                border-radius: 10px !important;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            }
+            
+            #view-dashboard h3 {
+                font-size: 1.25rem !important;
+                margin-top: 8px !important;
+            }
+            
+            #view-dashboard p {
+                font-size: 12px !important;
+            }
+            
+            #view-dashboard .p-6 {
+                padding: 14px !important;
+            }
+        }
+        
         /* Hide scrollbar on mobile main content */
         @media (max-width: 768px) {
             #main-content::-webkit-scrollbar {
@@ -415,6 +483,57 @@
                     transform: translateX(0);
                 }
             }
+            
+            /* Employees mobile styling */
+            #view-employees {
+                padding: 14px !important;
+            }
+            
+            #view-employees h2 {
+                font-size: 1.3rem !important;
+                margin-bottom: 14px !important;
+                padding-bottom: 8px;
+                border-bottom: 2px solid #e2e8f0;
+            }
+            
+            #view-employees h3 {
+                font-size: 1.15rem !important;
+                margin-top: 16px !important;
+                margin-bottom: 12px !important;
+            }
+            
+            #view-employees .bg-white {
+                padding: 12px !important;
+            }
+            
+            #view-employees form {
+                gap: 10px !important;
+            }
+            
+            #view-employees button {
+                padding: 11px 14px !important;
+                font-size: 13px !important;
+            }
+            
+            #view-employees input, 
+            #view-employees select {
+                font-size: 14px !important;
+                padding: 10px 11px !important;
+            }
+            
+            #view-employees table {
+                font-size: 12px;
+            }
+            
+            #view-employees th {
+                padding: 10px 8px !important;
+                font-size: 11px !important;
+            }
+            
+            #view-employees td {
+                padding: 10px 8px !important;
+                font-size: 12px !important;
+            }
         }
 
         #hamburger-btn {
@@ -426,39 +545,172 @@
                 display: flex;
             }
             
-            /* Invoice History Table Mobile Styling */
-            #view-history {
-                padding: 12px !important;
+            /* Incoming mobile styling */
+            #view-incoming {
+                padding: 14px !important;
             }
             
-            #view-history h2 {
-                font-size: 1.3rem;
-                margin-bottom: 16px;
+            #view-incoming h2 {
+                font-size: 1.3rem !important;
+                margin-bottom: 12px !important;
+                padding-bottom: 8px;
+                border-bottom: 2px solid #e2e8f0;
+            }
+            
+            #view-incoming button {
+                font-size: 13px !important;
+                padding: 10px 12px !important;
+            }
+            
+            #view-incoming table {
+                font-size: 11px;
+            }
+            
+            #view-incoming th {
+                padding: 10px 6px !important;
+                font-size: 10px !important;
+            }
+            
+            #view-incoming td {
+                padding: 10px 6px !important;
+                font-size: 11px !important;
+            }
+            
+            /* Invoices/Create mobile styling - Enhanced */
+            #view-invoices {
+                padding: 14px !important;
+                background-color: #f5f7fa;
+            }
+            
+            #view-invoices h2 {
+                font-size: 1.35rem !important;
+                margin-bottom: 16px !important;
+                padding-bottom: 10px;
+                border-bottom: 3px solid #fbbf24;
                 color: #1e293b;
-                font-weight: 800;
-            }
-            
-            #view-history table {
-                font-size: 10px;
-                margin: 0;
-            }
-            
-            #view-history th {
-                padding: 8px 6px !important;
-                font-size: 9px;
-                text-align: center;
                 font-weight: 700;
             }
             
-            #view-history td {
-                padding: 8px 6px !important;
+            #view-invoices .bg-white {
+                padding: 16px !important;
+                border-radius: 12px !important;
+                margin-bottom: 14px !important;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            }
+            
+            #view-invoices .grid {
+                gap: 12px !important;
+            }
+            
+            #view-invoices input,
+            #view-invoices select {
+                font-size: 14px !important;
+                padding: 11px 13px !important;
+                margin-bottom: 10px !important;
+                border: 2px solid #e2e8f0 !important;
+                border-radius: 8px !important;
+            }
+            
+            #view-invoices input:focus,
+            #view-invoices select:focus {
+                border-color: #f59e0b !important;
+                box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1) !important;
+            }
+            
+            #view-invoices label {
+                font-size: 13px !important;
+                margin-bottom: 5px !important;
+                font-weight: 600;
+                color: #1e293b;
+            }
+            
+            #view-invoices button {
+                font-size: 13px !important;
+                padding: 11px 14px !important;
+                border-radius: 8px !important;
+                font-weight: 700;
+                transition: all 0.2s;
+            }
+            
+            #view-invoices button:active {
+                transform: scale(0.98);
+            }
+            
+            #view-invoices table {
+                font-size: 12px;
+                margin: 10px 0 !important;
+                border-radius: 8px;
+                border: 1px solid #e2e8f0;
+            }
+            
+            #view-invoices th {
+                padding: 10px 8px !important;
+                font-size: 11px !important;
+                background: linear-gradient(135deg, #1e293b, #334155) !important;
+                color: white !important;
+                font-weight: 700;
+            }
+            
+            #view-invoices td {
+                padding: 9px 8px !important;
+                font-size: 12px !important;
+                border-bottom: 1px solid #f1f5f9 !important;
+            }
+            
+            #view-invoices h3 {
+                font-size: 1.2rem !important;
+                margin-bottom: 12px !important;
+                color: #1e293b;
+                font-weight: 700;
+            }
+            
+            #view-invoices .sticky {
+                top: 0;
+                background-color: white;
+                z-index: 10;
+                border-radius: 8px;
+                padding: 14px !important;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            }
+            
+            /* Invoice History Table Mobile Styling */
+            #view-history {
+                padding: 14px !important;
+            }
+            
+            #view-history h2 {
+                font-size: 1.35rem;
+                margin-bottom: 14px;
+                color: #1e293b;
+                font-weight: 700;
+                padding-bottom: 8px;
+                border-bottom: 2px solid #e2e8f0;
+            }
+            
+            #view-history table {
+                font-size: 12px;
+                margin: 0;
+                background-color: white;
+            }
+            
+            #view-history th {
+                padding: 10px 8px !important;
+                font-size: 11px;
                 text-align: center;
-                font-size: 10px;
+                font-weight: 700;
+                background: linear-gradient(135deg, #1e293b, #334155) !important;
+                color: white !important;
+            }
+            
+            #view-history td {
+                padding: 10px 8px !important;
+                text-align: center;
+                font-size: 12px;
             }
             
             #view-history button {
-                padding: 0 !important;
-                font-size: 10px !important;
+                padding: 8px 6px !important;
+                font-size: 11px !important;
             }
             
             .hidden-mobile {
@@ -542,14 +794,93 @@
                 font-size: 14px !important;
             }
             
+            /* Modal Content Styling - Enhanced */
+            #add-product-modal .bg-white,
+            #add-incoming-modal .bg-white {
+                border-radius: 16px !important;
+                margin: 20px auto !important;
+                max-width: 95vw !important;
+            }
+            
+            /* Product Modal Specific */
+            #add-product-modal .bg-gradient-to-r {
+                border-radius: 16px 16px 0 0;
+            }
+            
+            #add-product-modal form {
+                padding: 24px !important;
+                gap: 12px !important;
+            }
+            
+            #add-product-modal input, 
+            #add-product-modal label {
+                font-size: 13px !important;
+            }
+            
+            #add-product-modal .grid {
+                gap: 12px !important;
+            }
+            
+            #add-product-modal button[type="submit"] {
+                padding: 14px 18px !important;
+                font-size: 14px !important;
+                margin-top: 8px !important;
+            }
+            
+            #add-product-modal .space-y-3 > * + * {
+                margin-top: 12px !important;
+            }
+            
+            /* Incoming Modal Specific */
+            #add-incoming-modal .bg-gradient-to-r {
+                border-radius: 16px 16px 0 0;
+            }
+            
+            #add-incoming-modal form {
+                padding: 24px !important;
+                gap: 12px !important;
+            }
+            
+            #add-incoming-modal input, 
+            #add-incoming-modal label {
+                font-size: 13px !important;
+            }
+            
+            #add-incoming-modal .grid {
+                gap: 12px !important;
+            }
+            
+            #add-incoming-modal button[type="submit"] {
+                padding: 14px 18px !important;
+                font-size: 14px !important;
+                margin-top: 8px !important;
+            }
+            
+            #add-incoming-modal .space-y-3 > * + * {
+                margin-top: 12px !important;
+            }
+            
+            /* Image Preview Styling */
+            #incoming-image-preview {
+                padding: 12px !important;
+                background-color: #f9fafb !important;
+            }
+            
+            #incoming-image-thumb {
+                width: 80px !important;
+                height: 80px !important;
+            }
+            
             /* Inventory Mobile Styling */
             #view-inventory {
-                padding: 12px !important;
+                padding: 14px !important;
             }
             
             #view-inventory h2 {
-                font-size: 1.3rem !important;
+                font-size: 1.35rem !important;
                 margin-bottom: 12px !important;
+                padding-bottom: 8px;
+                border-bottom: 2px solid #e2e8f0;
             }
             
             #view-inventory button {
@@ -558,26 +889,28 @@
             }
             
             #view-inventory input {
-                font-size: 13px !important;
-                padding: 10px 12px !important;
+                font-size: 14px !important;
+                padding: 11px 12px !important;
             }
             
             #view-inventory .inventory-table {
-                font-size: 11px;
+                font-size: 12px;
             }
             
             #view-inventory th {
-                padding: 8px 6px !important;
-                font-size: 10px !important;
+                padding: 10px 8px !important;
+                font-size: 11px !important;
+                background: linear-gradient(135deg, #1e293b, #334155) !important;
+                color: white !important;
             }
             
             #view-inventory td {
-                padding: 8px 6px !important;
-                font-size: 11px !important;
+                padding: 10px 8px !important;
+                font-size: 12px !important;
             }
             
             #view-inventory button i {
-                font-size: 12px !important;
+                font-size: 13px !important;
             }
         }
     </style>
@@ -722,7 +1055,7 @@
         <div id="view-inventory" class="view-section hidden p-8">
             <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-3">
                 <h2 class="text-2xl font-bold text-slate-800">إدارة المخزون</h2>
-                <button onclick="toggleModal('add-product-modal', true)" class="bg-amber-600 hover:bg-amber-700 text-white px-4 py-3 rounded-lg flex items-center gap-2 transition shadow-lg w-full md:w-auto justify-center md:justify-start font-bold">
+                <button onclick="resetProductForm(); toggleModal('add-product-modal', true)" class="bg-amber-600 hover:bg-amber-700 text-white px-4 py-3 rounded-lg flex items-center gap-2 transition shadow-lg w-full md:w-auto justify-center md:justify-start font-bold">
                     <i class="ph ph-plus-circle text-lg"></i> إضافة صنف
                 </button>
             </div>
@@ -1062,48 +1395,78 @@
     </main>
 
     <!-- Modal: Add Product -->
-    <div id="add-product-modal" class="fixed inset-0 bg-black/60 hidden flex items-center justify-center z-50 p-4 backdrop-blur-sm overflow-y-auto">
-        <div class="bg-white rounded-xl shadow-2xl w-full max-w-md overflow-hidden transform transition-all my-8">
-            <div class="bg-slate-900 text-white px-3 py-2 flex justify-between items-center sticky top-0 z-10">
-                <h3 class="font-bold text-sm">إضافة منتج</h3>
-                <button onclick="toggleModal('add-product-modal', false)" class="hover:text-red-300 transition text-base"><i class="ph ph-x"></i></button>
+    <div id="add-product-modal" class="fixed inset-0 bg-black/50 hidden flex items-center justify-center z-50 p-2 backdrop-blur-sm overflow-y-auto">
+        <div class="bg-white rounded-2xl shadow-2xl w-full max-w-sm overflow-hidden transform transition-all my-4">
+            <!-- Header with softer, consistent brand -->
+            <div class="modal-header flex justify-between items-center">
+                <div class="flex items-center gap-2">
+                    <div class="icon-wrapper">
+                        <i class="ph ph-package text-lg"></i>
+                    </div>
+                    <div>
+                        <h3 id="product-modal-title" class="font-bold text-sm">إضافة منتج جديد</h3>
+                        <p class="text-xs text-amber-100">أضف منتج</p>
+                    </div>
+                </div>
+                <button onclick="toggleModal('add-product-modal', false)" class="hover:bg-white/20 transition p-1 rounded-lg"><i class="ph ph-x text-lg"></i></button>
             </div>
-            <form id="product-form" onsubmit="handleAddProduct(event)" class="p-5 space-y-3 overflow-y-auto max-h-[calc(100vh-200px)]">
+            
+            <form id="product-form" onsubmit="handleAddProduct(event)" class="p-6 space-y-4 overflow-y-auto max-h-[calc(100vh-250px)]">
                 <input type="hidden" id="prod-id">
-                <div>
-                    <label class="block text-xs font-bold text-gray-700 mb-1">كود المنتج</label>
-                    <input required type="text" id="prod-code" class="w-full p-2 border-2 border-gray-300 rounded focus:border-amber-500 outline-none text-sm">
-                </div>
-                <div>
-                    <label class="block text-xs font-bold text-gray-700 mb-1">نوع الصنف</label>
-                    <input required type="text" id="prod-type" class="w-full p-2 border-2 border-gray-300 rounded focus:border-amber-500 outline-none text-sm">
-                </div>
-                <div class="grid grid-cols-2 gap-2">
+                
+                <!-- Basic Info Section -->
+                <div class="space-y-3">
+                    <p class="text-xs font-bold text-amber-600 uppercase tracking-wider">المعلومات الأساسية</p>
                     <div>
-                        <label class="block text-xs font-bold text-gray-700 mb-1">المقاس</label>
-                        <input type="text" id="prod-size" class="w-full p-2 border-2 border-gray-300 rounded focus:border-amber-500 outline-none text-sm" placeholder="مثال: M, L, 40">
+                        <label class="block text-sm font-semibold text-slate-800 mb-2">كود المنتج</label>
+                        <input required type="text" id="prod-code" class="w-full px-4 py-2.5 border-2 border-gray-200 rounded-lg focus:border-amber-500 focus:ring-2 focus:ring-amber-100 outline-none text-sm transition" placeholder="مثال: SKU-001">
                     </div>
                     <div>
-                        <label class="block text-xs font-bold text-gray-700 mb-1">اللون</label>
-                        <input type="text" id="prod-color" class="w-full p-2 border-2 border-gray-300 rounded focus:border-amber-500 outline-none text-sm" placeholder="مثال: أحمر، أزرق">
+                        <label class="block text-sm font-semibold text-slate-800 mb-2">نوع الصنف</label>
+                        <input required type="text" id="prod-type" class="w-full px-4 py-2.5 border-2 border-gray-200 rounded-lg focus:border-amber-500 focus:ring-2 focus:ring-amber-100 outline-none text-sm transition" placeholder="مثال: قميص، بنطلون">
                     </div>
                 </div>
-                <div class="grid grid-cols-2 gap-2">
+                
+                <!-- Details Section -->
+                <div class="space-y-3">
+                    <p class="text-xs font-bold text-amber-600 uppercase tracking-wider">التفاصيل</p>
+                    <div class="grid grid-cols-2 gap-3">
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-800 mb-2">المقاس</label>
+                            <input type="text" id="prod-size" class="w-full px-3 py-2.5 border-2 border-gray-200 rounded-lg focus:border-amber-500 focus:ring-2 focus:ring-amber-100 outline-none text-sm transition" placeholder="M, L, 40">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-800 mb-2">اللون</label>
+                            <input type="text" id="prod-color" class="w-full px-3 py-2.5 border-2 border-gray-200 rounded-lg focus:border-amber-500 focus:ring-2 focus:ring-amber-100 outline-none text-sm transition" placeholder="أحمر، أزرق">
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-3">
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-800 mb-2">الوزن (جم)</label>
+                            <input type="number" id="prod-weight" class="w-full px-3 py-2.5 border-2 border-gray-200 rounded-lg focus:border-amber-500 focus:ring-2 focus:ring-amber-100 outline-none text-sm transition" placeholder="500">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-800 mb-2">الكمية</label>
+                            <input required type="number" id="prod-qty" class="w-full px-3 py-2.5 border-2 border-gray-200 rounded-lg focus:border-amber-500 focus:ring-2 focus:ring-amber-100 outline-none text-sm transition" placeholder="0">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pricing Section -->
+                <div class="space-y-3">
+                    <p class="text-xs font-bold text-amber-600 uppercase tracking-wider">السعر</p>
                     <div>
-                        <label class="block text-xs font-bold text-gray-700 mb-1">الوزن (جم)</label>
-                        <input type="number" id="prod-weight" class="w-full p-2 border-2 border-gray-300 rounded focus:border-amber-500 outline-none text-sm">
-                    </div>
-                    <div>
-                        <label class="block text-xs font-bold text-gray-700 mb-1">الكمية</label>
-                        <input required type="number" id="prod-qty" class="w-full p-2 border-2 border-gray-300 rounded focus:border-amber-500 outline-none text-sm">
+                        <label class="block text-sm font-semibold text-slate-800 mb-2">السعر (ج.م)</label>
+                        <div class="relative">
+                            <input required type="number" id="prod-price" class="w-full px-4 py-2.5 pr-8 border-2 border-gray-200 rounded-lg focus:border-amber-500 focus:ring-2 focus:ring-amber-100 outline-none text-sm transition" placeholder="0.00">
+                            <span class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 text-sm">ج.م</span>
+                        </div>
                     </div>
                 </div>
-                <div>
-                    <label class="block text-xs font-bold text-gray-700 mb-1">السعر (ج.م)</label>
-                    <input required type="number" id="prod-price" class="w-full p-2 border-2 border-gray-300 rounded focus:border-amber-500 outline-none text-sm">
-                </div>
-                <button type="submit" class="w-full bg-amber-600 text-white py-2 rounded-lg font-bold hover:bg-amber-700 shadow-md transition text-sm">
-                    حفظ
+                
+                <!-- Submit Button -->
+                <button id="product-submit-btn" type="submit" class="w-full modal-cta hover:bg-amber-700 text-white font-bold py-3 rounded-lg shadow-lg hover:shadow-xl transition transform hover:scale-105 mt-6 flex items-center justify-center gap-2">
+                    <i class="ph ph-check-circle"></i> حفظ المنتج
                 </button>
             </form>
         </div>
@@ -1189,55 +1552,90 @@
     </div>
 
     <!-- Modal: Add Incoming -->
-    <div id="add-incoming-modal" class="fixed inset-0 bg-black/60 hidden flex items-center justify-center z-50 p-4 backdrop-blur-sm overflow-y-auto">
-        <div class="bg-white rounded-xl shadow-2xl w-full max-w-md overflow-hidden transform transition-all my-8">
-            <div class="bg-slate-900 text-white px-3 py-2 flex justify-between items-center sticky top-0 z-10">
-                <h3 class="font-bold text-sm" id="incoming-modal-title">إضافة وارد</h3>
-                <button onclick="toggleModal('add-incoming-modal', false)" class="hover:text-red-300 transition text-base"><i class="ph ph-x"></i></button>
+    <div id="add-incoming-modal" class="fixed inset-0 bg-black/50 hidden flex items-center justify-center z-50 p-2 backdrop-blur-sm overflow-y-auto">
+        <div class="bg-white rounded-2xl shadow-2xl w-full max-w-sm overflow-hidden transform transition-all my-4">
+            <!-- Header with softer, consistent brand -->
+            <div class="modal-header flex justify-between items-center">
+                <div class="flex items-center gap-2">
+                    <div class="icon-wrapper">
+                        <i class="ph ph-truck text-lg"></i>
+                    </div>
+                    <div>
+                        <h3 id="incoming-modal-title" class="font-bold text-sm">إضافة وارد جديد</h3>
+                        <p class="text-xs text-amber-100">سجل المشتريات</p>
+                    </div>
+                </div>
+                <button onclick="toggleModal('add-incoming-modal', false)" class="hover:bg-white/20 transition p-1 rounded-lg"><i class="ph ph-x text-lg"></i></button>
             </div>
-            <form id="incoming-form" onsubmit="handleAddIncoming(event)" class="p-5 space-y-3 overflow-y-auto max-h-[calc(100vh-200px)]">
+            
+                <form id="incoming-form" onsubmit="handleAddIncoming(event)" class="p-6 space-y-4 overflow-y-auto max-h-[calc(100vh-250px)]">
                 <input type="hidden" id="incoming-id">
-                <div>
-                    <label class="block text-xs font-bold text-gray-700 mb-1">كود الفاتورة</label>
-                    <input required type="text" id="incoming-code" class="w-full p-2 border-2 border-gray-300 rounded focus:border-amber-500 outline-none text-sm" placeholder="مثال: INV-001">
-                </div>
-                <div>
-                    <label class="block text-xs font-bold text-gray-700 mb-1">تاريخ الفاتورة</label>
-                    <input required type="text" id="incoming-date" class="w-full p-2 border-2 border-gray-300 rounded focus:border-amber-500 outline-none text-sm" placeholder="مثال: 25/01/2026" oninput="formatArabicDate(this)">
-                </div>
-                <div>
-                    <label class="block text-xs font-bold text-gray-700 mb-1">الصنف</label>
-                    <input required type="text" id="incoming-item" class="w-full p-2 border-2 border-gray-300 rounded focus:border-amber-500 outline-none text-sm" placeholder="نوع الصنف">
-                </div>
-                <div class="grid grid-cols-2 gap-2">
+                
+                <!-- Invoice Info Section -->
+                <div class="space-y-3">
+                    <p class="text-xs font-bold text-amber-600 uppercase tracking-wider">بيانات الفاتورة</p>
                     <div>
-                        <label class="block text-xs font-bold text-gray-700 mb-1">اللون</label>
-                        <input type="text" id="incoming-color" class="w-full p-2 border-2 border-gray-300 rounded focus:border-amber-500 outline-none text-sm" placeholder="مثال: أحمر، أزرق">
+                        <label class="block text-sm font-semibold text-slate-800 mb-2">كود الفاتورة</label>
+                        <input required type="text" id="incoming-code" class="w-full px-4 py-2.5 border-2 border-gray-200 rounded-lg focus:border-amber-500 focus:ring-2 focus:ring-amber-100 outline-none text-sm transition" placeholder="مثال: INV-001">
                     </div>
                     <div>
-                        <label class="block text-xs font-bold text-gray-700 mb-1">العدد</label>
-                        <input type="number" id="incoming-quantity" class="w-full p-2 border-2 border-gray-300 rounded focus:border-amber-500 outline-none text-sm" placeholder="الكمية">
+                        <label class="block text-sm font-semibold text-slate-800 mb-2">تاريخ الفاتورة</label>
+                        <input required type="text" id="incoming-date" class="w-full px-4 py-2.5 border-2 border-gray-200 rounded-lg focus:border-amber-500 focus:ring-2 focus:ring-amber-100 outline-none text-sm transition" placeholder="25/01/2026" oninput="formatArabicDate(this)">
                     </div>
                 </div>
-                <div class="grid grid-cols-2 gap-2">
+                
+                <!-- Item Info Section -->
+                <div class="space-y-3">
+                    <p class="text-xs font-bold text-amber-600 uppercase tracking-wider">تفاصيل الصنف</p>
                     <div>
-                        <label class="block text-xs font-bold text-gray-700 mb-1">الوزن (كيلو)</label>
-                        <input type="number" step="0.01" id="incoming-weight" class="w-full p-2 border-2 border-gray-300 rounded focus:border-amber-500 outline-none text-sm" placeholder="الوزن">
+                        <label class="block text-sm font-semibold text-slate-800 mb-2">نوع الصنف</label>
+                        <input required type="text" id="incoming-item" class="w-full px-4 py-2.5 border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none text-sm transition" placeholder="مثال: قميص، بنطلون">
                     </div>
+                    <div class="grid grid-cols-2 gap-3">
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-800 mb-2">اللون</label>
+                            <input type="text" id="incoming-color" class="w-full px-3 py-2.5 border-2 border-gray-200 rounded-lg focus:border-amber-500 focus:ring-2 focus:ring-amber-100 outline-none text-sm transition" placeholder="أحمر، أزرق">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-800 mb-2">العدد</label>
+                            <input type="number" id="incoming-quantity" class="w-full px-3 py-2.5 border-2 border-gray-200 rounded-lg focus:border-amber-500 focus:ring-2 focus:ring-amber-100 outline-none text-sm transition" placeholder="0">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quantity & Value Section -->
+                <div class="space-y-3">
+                    <p class="text-xs font-bold text-amber-600 uppercase tracking-wider">الكميات والقيم</p>
+                    <div class="grid grid-cols-2 gap-3">
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-800 mb-2">الوزن (كيلو)</label>
+                            <input type="number" step="0.01" id="incoming-weight" class="w-full px-3 py-2.5 border-2 border-gray-200 rounded-lg focus:border-amber-500 focus:ring-2 focus:ring-amber-100 outline-none text-sm transition" placeholder="0.00">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-800 mb-2">القيمة (ج.م)</label>
+                            <div class="relative">
+                                <input type="number" step="0.01" id="incoming-value" class="w-full px-3 py-2.5 pr-8 border-2 border-gray-200 rounded-lg focus:border-amber-500 focus:ring-2 focus:ring-amber-100 outline-none text-sm transition" placeholder="0.00">
+                                <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 text-xs">ج.م</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Image Section -->
+                <div class="space-y-3">
+                    <p class="text-xs font-bold text-amber-600 uppercase tracking-wider">صورة الفاتورة</p>
                     <div>
-                        <label class="block text-xs font-bold text-gray-700 mb-1">القيمة (ج.م)</label>
-                        <input type="number" step="0.01" id="incoming-value" class="w-full p-2 border-2 border-gray-300 rounded focus:border-amber-500 outline-none text-sm" placeholder="القيمة">
+                        <label class="block text-sm font-semibold text-slate-800 mb-2">اختر صورة الفاتورة</label>
+                        <input type="file" id="incoming-image" accept="image/*" class="w-full px-4 py-2.5 border-2 border-dashed border-gray-300 rounded-lg focus:border-amber-500 outline-none text-xs transition cursor-pointer hover:border-amber-300" onchange="previewIncomingImage(event)">
+                        <div id="incoming-image-preview" class="mt-3 hidden p-3 bg-gray-50 rounded-lg border border-gray-200">
+                            <img id="incoming-image-thumb" class="w-20 h-20 object-cover border-2 border-gray-300 rounded-lg" alt="معاينة الصورة">
+                        </div>
                     </div>
                 </div>
-                <div>
-                    <label class="block text-xs font-bold text-gray-700 mb-1">صورة الفاتورة</label>
-                    <input type="file" id="incoming-image" accept="image/*" class="w-full p-2 border-2 border-gray-300 rounded focus:border-amber-500 outline-none text-xs" onchange="previewIncomingImage(event)">
-                    <div id="incoming-image-preview" class="mt-2 hidden">
-                        <img id="incoming-image-thumb" class="w-16 h-16 object-cover border rounded" alt="معاينة الصورة">
-                    </div>
-                </div>
-                <button type="submit" id="incoming-submit-btn" class="w-full bg-amber-600 hover:bg-amber-700 text-white py-2 rounded-lg font-bold shadow-md transition text-sm">
-                    حفظ
+                
+                <!-- Submit Button -->
+                <button type="submit" id="incoming-submit-btn" class="w-full modal-cta hover:bg-amber-700 text-white font-bold py-3 rounded-lg shadow-lg hover:shadow-xl transition transform hover:scale-105 mt-6 flex items-center justify-center gap-2">
+                    <i class="ph ph-check-circle"></i> حفظ الوارد
                 </button>
             </form>
         </div>
@@ -1628,7 +2026,24 @@
             document.getElementById('prod-price').value = p.price || '';
             document.getElementById('prod-size').value = p.size || '';
             document.getElementById('prod-color').value = p.color || '';
+            // Update modal title and submit button for edit mode
+            const titleEl = document.getElementById('product-modal-title');
+            if(titleEl) titleEl.innerText = 'تعديل المنتج';
+            const submitBtn = document.getElementById('product-submit-btn');
+            if(submitBtn) submitBtn.innerText = 'حفظ التعديل';
             toggleModal('add-product-modal', true);
+        };
+
+        // Reset product form for add-new flow
+        window.resetProductForm = () => {
+            const form = document.getElementById('product-form');
+            if(form) form.reset();
+            const idEl = document.getElementById('prod-id');
+            if(idEl) idEl.value = '';
+            const titleEl = document.getElementById('product-modal-title');
+            if(titleEl) titleEl.innerText = 'إضافة منتج جديد';
+            const submitBtn = document.getElementById('product-submit-btn');
+            if(submitBtn) submitBtn.innerText = 'حفظ المنتج';
         };
 
         // --- Invoice Logic ---
