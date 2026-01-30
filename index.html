@@ -2832,7 +2832,50 @@
             if (modal) modal.classList.add('hidden');
         };
 
-        // Simple helper: download the JSON content then open Google in new tab
+        // Helper: open a URL in external browser when running as standalone (PWA) or just open new tab otherwise
+        function isInStandaloneMode() {
+            return window.matchMedia && window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
+        }
+
+        async function openInExternalBrowser(url) {
+            // If not in standalone, normal new tab will work
+            if (!isInStandaloneMode()) {
+                window.open(url, '_blank', 'noopener');
+                return;
+            }
+
+            // Ask the user before attempting to leave the app
+            const ok = confirm('سيتم فتح متصفح خارجي لتمكين التحميل والرفع. هل تريد المتابعة؟');
+            if (!ok) return;
+
+            // Try anchor click with target=_blank + rel=noopener
+            try {
+                const a = document.createElement('a');
+                a.href = url;
+                a.target = '_blank';
+                a.rel = 'noopener noreferrer';
+                a.style.display = 'none';
+                document.body.appendChild(a);
+                a.click();
+                a.remove();
+
+                // On Android attempt intent fallback to force Chrome
+                if (/Android/i.test(navigator.userAgent)) {
+                    const intentUrl = url.replace(/^https?:\/\//, 'intent://') + '#Intent;scheme=https;package=com.android.chrome;end';
+                    setTimeout(() => { window.location.href = intentUrl; }, 600);
+                }
+
+                showNotification('تم محاولة فتح المتصفح الخارجي. إذا لم يفتح، استخدم زر المشاركة أو افتح المتصفح يدوياً.');
+                return;
+            } catch (err) {
+                console.warn('openInExternalBrowser failed', err);
+            }
+
+            // Fallback: open in same window
+            window.location.href = url;
+        }
+
+        // Download the JSON content then open Google Drive in external browser
         window.downloadAndOpenGoogle = () => {
             const modal = document.getElementById('backup-fallback-modal');
             if (!modal) return;
@@ -2848,9 +2891,8 @@
             link.click();
             document.body.removeChild(link);
 
-            showNotification('تم تنزيل الملف. سيتم فتح Google الآن لرفع الملف يدوياً.');
-            // Open Google (homepage) in a new tab as requested
-            window.open('https://www.google.com', '_blank');
+            showNotification('تم تنزيل الملف. سيتم فتح Google Drive في متصفح خارجي لرفع الملف يدوياً.');
+            openInExternalBrowser('https://drive.google.com/drive/my-drive');
         };
 
 
