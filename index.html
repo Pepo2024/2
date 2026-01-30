@@ -1262,9 +1262,9 @@
                         <div class="flex gap-2">
                             <button onclick="copyBackupToClipboard()" class="flex-1 bg-slate-800 text-white py-2 rounded">نسخ</button>
                             <button onclick="shareBackupText()" class="flex-1 bg-amber-600 text-white py-2 rounded">مشاركة</button>
-                            <button onclick="downloadAndOpenDrive()" class="flex-1 bg-blue-600 text-white py-2 rounded">تحميل ورفع إلى Drive</button>
+                            <button onclick="downloadAndOpenGoogle()" class="flex-1 bg-blue-600 text-white py-2 rounded">تحميل وفتح Google</button>
                             <button onclick="openBackupInNewTab()" class="flex-1 bg-gray-200 py-2 rounded">فتح</button>
-                        </div>
+                        </div>    
                     </div>
                 </div>
                         <button onclick="importData()" class="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg font-bold shadow-lg transition flex items-center justify-center gap-2">
@@ -2830,6 +2830,27 @@
         window.closeBackupFallback = () => {
             const modal = document.getElementById('backup-fallback-modal');
             if (modal) modal.classList.add('hidden');
+        };
+
+        // Simple helper: download the JSON content then open Google in new tab
+        window.downloadAndOpenGoogle = () => {
+            const modal = document.getElementById('backup-fallback-modal');
+            if (!modal) return;
+            const textarea = modal.querySelector('textarea');
+            const filename = modal.querySelector('.backup-filename').innerText || `نسخة_احتياطية_${new Date().toLocaleDateString('ar-EG')}.json`;
+            const blob = new Blob([textarea.value], { type: 'application/json' });
+
+            // Trigger download
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = filename;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+
+            showNotification('تم تنزيل الملف. سيتم فتح Google الآن لرفع الملف يدوياً.');
+            // Open Google (homepage) in a new tab as requested
+            window.open('https://www.google.com', '_blank');
         };
 
 
