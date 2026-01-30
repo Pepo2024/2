@@ -1262,28 +1262,9 @@
                         <div class="flex gap-2">
                             <button onclick="copyBackupToClipboard()" class="flex-1 bg-slate-800 text-white py-2 rounded">نسخ</button>
                             <button onclick="shareBackupText()" class="flex-1 bg-amber-600 text-white py-2 rounded">مشاركة</button>
-                            <button onclick="downloadAndOpenGoogle()" class="flex-1 bg-blue-600 text-white py-2 rounded">تحميل وفتح Google Drive</button>
+                            <button onclick="downloadAndOpenDrive()" class="flex-1 bg-blue-600 text-white py-2 rounded">تحميل ورفع إلى Drive</button>
                             <button onclick="openBackupInNewTab()" class="flex-1 bg-gray-200 py-2 rounded">فتح</button>
                         </div>
-
-                        <!-- If running inside in-app browser, show instructions and actions -->
-                        <div id="backup-app-warning" class="hidden mt-3 p-3 bg-yellow-50 border border-yellow-200 rounded">
-                            <p class="text-sm text-yellow-800 mb-2">يبدو أنك داخل تطبيق (In-App). التنزيل قد لا يعمل داخل المتصفح المضمّن. يمكنك:</p>
-                            <div class="flex gap-2">
-                                <button onclick="openInExternalBrowser('https://drive.google.com/drive/my-drive')" class="flex-1 bg-slate-800 text-white py-2 rounded">فتح Drive في متصفح خارجي</button>
-                                <button onclick="openBlobUrlInNewTab()" class="flex-1 bg-blue-600 text-white py-2 rounded">تحميل وفتح رابط التحميل (ثم افتح المتصفح خارجي)</button>
-                            </div>
-
-                            <div id="backup-link-area" class="mt-3 hidden">
-                                <label class="text-sm text-gray-700 mb-2 block">رابط التحميل (اضغط مطولًا لفتح في المتصفح أو انسخه):</label>
-                                <div class="flex gap-2 items-center">
-                                    <a id="backup-download-link" href="#" class="flex-1 p-2 border rounded break-words text-sm text-blue-700" target="_blank" rel="noopener noreferrer">--</a>
-                                    <button onclick="copyDownloadLink()" class="py-2 px-3 bg-slate-800 text-white rounded">نسخ الرابط</button>
-                                </div>
-                            </div>
-
-                            <p class="text-xs text-gray-600 mt-2">أو أغلق التطبيق وافتح الرابط في متصفح Chrome/Firefox ثم ارفع الملف.</p>
-                        </div>    
                     </div>
                 </div>
                         <button onclick="importData()" class="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg font-bold shadow-lg transition flex items-center justify-center gap-2">
@@ -2850,122 +2831,6 @@
             const modal = document.getElementById('backup-fallback-modal');
             if (modal) modal.classList.add('hidden');
         };
-
-        // Helper: open a URL in external browser when running as standalone (PWA) or just open new tab otherwise
-        function isInStandaloneMode() {
-            return window.matchMedia && window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
-        }
-
-        async function openInExternalBrowser(url) {
-            // If not in standalone, normal new tab will work
-            if (!isInStandaloneMode()) {
-                window.open(url, '_blank', 'noopener');
-                return;
-            }
-
-            // Ask the user before attempting to leave the app
-            const ok = confirm('سيتم فتح متصفح خارجي لتمكين التحميل والرفع. هل تريد المتابعة؟');
-            if (!ok) return;
-
-            // Try anchor click with target=_blank + rel=noopener
-            try {
-                const a = document.createElement('a');
-                a.href = url;
-                a.target = '_blank';
-                a.rel = 'noopener noreferrer';
-                a.style.display = 'none';
-                document.body.appendChild(a);
-                a.click();
-                a.remove();
-
-                // On Android attempt intent fallback to force Chrome
-                if (/Android/i.test(navigator.userAgent)) {
-                    const intentUrl = url.replace(/^https?:\/\//, 'intent://') + '#Intent;scheme=https;package=com.android.chrome;end';
-                    setTimeout(() => { window.location.href = intentUrl; }, 600);
-                }
-
-                showNotification('تم محاولة فتح المتصفح الخارجي. إذا لم يفتح، استخدم زر المشاركة أو افتح المتصفح يدوياً.');
-                return;
-            } catch (err) {
-                console.warn('openInExternalBrowser failed', err);
-            }
-
-            // Fallback: open in same window
-            window.location.href = url;
-        }
-
-        // Download the JSON content then open Google Drive in external browser
-        window.downloadAndOpenGoogle = () => {
-            const modal = document.getElementById('backup-fallback-modal');
-            if (!modal) return;
-            const textarea = modal.querySelector('textarea');
-            const filename = modal.querySelector('.backup-filename').innerText || `نسخة_احتياطية_${new Date().toLocaleDateString('ar-EG')}.json`;
-            const blob = new Blob([textarea.value], { type: 'application/json' });
-
-            // Trigger download
-            const link = document.createElement('a');
-            link.href = URL.createObjectURL(blob);
-            link.download = filename;
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-
-            // If we're inside an in-app browser, show the instructions warning/modal
-            if (isInAppBrowser()) {
-                document.getElementById('backup-app-warning').classList.remove('hidden');
-                showNotification('تم تنزيل الملف. يرجى فتح Drive في متصفح خارجي لرفع الملف يدوياً.');
-                return;
-            }
-
-            showNotification('تم تنزيل الملف. سيتم فتح Google Drive في متصفح خارجي لرفع الملف يدوياً.');
-            openInExternalBrowser('https://drive.google.com/drive/my-drive');
-        };
-
-        // Create and show a blob URL (usable when in-app browsers block downloads)
-        window.createAndShowBlobLink = () => {
-            const modal = document.getElementById('backup-fallback-modal');
-            if (!modal) return null;
-            const textarea = modal.querySelector('textarea');
-            const filename = modal.querySelector('.backup-filename').innerText || `نسخة_احتياطية_${new Date().toLocaleDateString('ar-EG')}.json`;
-            const blob = new Blob([textarea.value], { type: 'application/json' });
-            const url = URL.createObjectURL(blob);
-
-            const linkArea = document.getElementById('backup-link-area');
-            const linkEl = document.getElementById('backup-download-link');
-            if (linkEl && linkArea) {
-                linkEl.href = url;
-                linkEl.innerText = filename;
-                linkEl.setAttribute('download', filename);
-                linkArea.classList.remove('hidden');
-                // show also the top warning area
-                document.getElementById('backup-app-warning').classList.remove('hidden');
-            }
-
-            return url;
-        };
-
-        window.openBlobUrlInNewTab = () => {
-            const url = createAndShowBlobLink();
-            if (url) openInExternalBrowser(url);
-        };
-
-        window.copyDownloadLink = async () => {
-            const linkEl = document.getElementById('backup-download-link');
-            if (!linkEl) return;
-            try {
-                await navigator.clipboard.writeText(linkEl.href);
-                showNotification('تم نسخ رابط التحميل للحافظة');
-            } catch (err) {
-                alert('نسخ الرابط فشل، الرجاء ضغط المطوّل على الرابط ونسخه يدوياً.');
-            }
-        };
-
-        // Detect common in-app browser user agents
-        function isInAppBrowser() {
-            const ua = navigator.userAgent || '';
-            const patterns = ['FBAN', 'FBAV', 'Twitter', 'Instagram', 'Line', 'WhatsApp', 'Telegram', 'wv', 'WebView'];
-            return patterns.some(p => ua.indexOf(p) !== -1);
-        }
 
 
         window.importData = () => {
